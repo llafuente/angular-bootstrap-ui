@@ -1,0 +1,43 @@
+// Breadcrumbs
+
+// boostrap
+
+$breadcrumb-bg:                 $blue !default;
+$breadcrumb-divider:            "\f105";
+$breadcrumb-divider-color:      $gray-500 !default;
+
+// custom
+$breadcrumb-link-color: lighten($blue, 10%) !default;
+$breadcrumb-link-hover: lighten($blue, 20%) !default;
+
+.breadcrumb {
+  li {
+    margin-bottom: 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 175px;
+  }
+
+  // use last-of-type instead of last-child, because tooltip will be the
+  // last-child removing the bold :S
+  li:last-of-type {
+    font-weight: bold;
+    max-width: none; // don't show ellipsis for last child
+  }
+
+  // ellipsis color
+  // this also affects to breadcrumb gaps, so optional :D
+  // color: xxx;
+
+  a {
+    color: $breadcrumb-link-color;
+  }
+  a:hover {
+    color: $breadcrumb-link-hover;
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    font: normal normal normal 14px/1 FontAwesome;
+  }
+}

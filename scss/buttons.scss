@@ -1,0 +1,43 @@
+// CHANGE from 38px
+$input-btn-padding-x: 1rem;
+// CHANGE from 22px
+$input-btn-padding-y: 0.75rem;
+
+$btn-border-radius: 1px;
+$btn-border-radius-lg: 1px;
+$btn-border-radius-sm: 1px;
+
+// TODO buttons: success, warning, danger
+
+// auth-disabled is a way to "re-disable" something
+bb-button.disabled,
+bb-button.auth-disabled {
+  pointer-events:none;
+  .btn {
+    background-color: $gray-300 !important;
+    border-color: $gray-300;
+    color: $white;
+  }
+}
+
+// disabled button should be gray
+// button style can be applied to buttons and anchors
+.btn.disabled,
+.btn:disabled,
+.btn[disabled="disabled"] {
+  pointer-events:none;
+  background-color: $gray-300 !important;
+  border-color: $gray-300;
+  color: $white;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover,
+.btn[disabled="disabled"]:hover {
+  background-color: $gray-400 !important;
+  border-color: $gray-400;
+}
+
+.btn.input-aligned {
+  margin-top: 16px;
+}

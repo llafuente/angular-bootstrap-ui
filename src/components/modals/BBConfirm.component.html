@@ -1,0 +1,17 @@
+<bb-modal
+  #bbModal=""
+  [header]="header"
+  [size]="size"
+  [closeButton]="false">
+  <bb-section-content>
+    <ng-content></ng-content>
+  </bb-section-content>
+  <bb-section-footer>
+    <div class="d-flex">
+      <bb-button btn="secondary" (click)="hide(false)">{{(cancel || 'confirm.cancel') | translate}}</bb-button>
+      <bb-button
+        class="ml-auto"
+        (click)="hide(true)">{{(accept || 'confirm.accept') | translate}}</bb-button>
+    </div>
+  </bb-section-footer>
+</bb-modal>

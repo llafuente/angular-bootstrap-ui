@@ -1,0 +1,63 @@
+$form-checkbox-border-color: $blue !default;
+
+bb-check {
+  .form-check-label > span {
+    padding-left: 4px;
+  }
+}
+
+
+.ui-checkbox {
+  .custom-control-indicator {
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: 1px solid #D3D3D3;
+  }
+
+  .custom-control-input:disabled ~ .custom-control-indicator {
+    background-color: $gray-200;
+  }
+
+  .custom-control-description {
+    padding-left: 10px;
+    padding-top: 4px;
+  }
+
+  /*
+  .custom-control-input:checked ~ .custom-control-indicator {
+    background-image: $custom-checkbox-icon-checked;
+  }
+
+  .custom-control-input:indeterminate ~ .custom-control-indicator {
+    background-color: $custom-checkbox-indeterminate-bg;
+    background-image: $custom-checkbox-icon-indeterminate;
+    @include box-shadow($custom-checkbox-indeterminate-box-shadow);
+  }
+  */
+
+  .custom-control-input:checked {
+    & ~ .custom-control-indicator {
+      background-color: transparent !important;
+      background-image: none;
+    }
+
+    &:disabled ~ .custom-control-indicator {
+      background-color: $gray-200 !important;
+    }
+
+    & ~ .custom-control-indicator:after {
+      @include fa-icon();
+      content: $fa-var-check;
+      color: $form-checkbox-border-color;
+      padding: 4px;
+    }
+  }
+
+  .custom-control-input:focus ~ .custom-control-indicator {
+    box-shadow: 0 0 0 1px $form-checkbox-border-color, 0 0 0 1.5px;
+  }
+  .custom-control-input:active ~ .custom-control-indicator {
+    background-color: transparent;
+  }
+}

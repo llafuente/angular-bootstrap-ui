@@ -1,0 +1,64 @@
+<div>
+  <button class="btn" [routerLink]="['/breadcrumb']">breadcrumb root</button>
+
+  <h4>Normal navigation</h4>
+  <button class="btn" [routerLink]="['/breadcrumb/level-1a']">breadcrumb level 1 A</button>
+  <button class="btn" [routerLink]="['/breadcrumb/level-1a/level-2']">breadcrumb - level 1 A - level-2</button>
+
+  <h4>Navigation with gaps</h4>
+  <button class="btn" [routerLink]="['/breadcrumb/level-1b/level-2']">breadcrumb - level 1 B - level-2</button>
+
+  <h4>Long labels</h4>
+  <button class="btn" [routerLink]="['/breadcrumb/level-1c']">breadcrumb - level C</button>
+  <button class="btn" [routerLink]="['/breadcrumb/level-1c/level-2']">breadcrumb - level C - level 2</button>
+
+  <h4>Function label</h4>
+  <button class="btn" [routerLink]="['/breadcrumb/complex']">breadcrumb - complex</button>
+</div>
+
+<hr />
+
+<bb-breadcrumb></bb-breadcrumb>
+
+<hr />
+
+<router-outlet></router-outlet>
+
+<h3>Documentation</h3>
+
+<h4>Route metadata</h4>
+
+<p>Route.<strong>data.breadcrumb</strong>: string</p>
+
+<p>This is the breadcrumb label to be displayed</p>
+
+<p>Route.<strong>data.breadcrumbLink</strong>: boolean</p>
+
+<p>This breadcrumb is a Link or plain text?
+Optional, default: true</p>
+
+<!-- this is really stupid Angular issue! https://github.com/angular/angular/issues/11859 -->
+<pre>
+{{'{
+  path: "breadcrumb",
+  component: BB4UI.BreadcrumbExampleComponent,
+  data: {
+    breadcrumb: "Breadcrumb",
+  },
+}'}}
+</pre>
+
+<h4>Component</h4>
+
+<pre>
+  &lt;bb-breadcrumb [ignoredLevels]="number">&lt;/bb-breadcrumb>
+</pre>
+
+<p><strong>ignoredLevels (Optional, default: 0)</strong>: Ignore the first X levels.<br />
+Use [ignoredLevels]="1" to hide Home link.</p>
+
+<h4>i18n</h4>
+
+Every label pass through the translate pipe.
+
+<strong>breadcumb.home</strong>: label for the home link.

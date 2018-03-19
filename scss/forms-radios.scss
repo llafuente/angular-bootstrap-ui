@@ -1,0 +1,53 @@
+$form-radio-border-color: $blue !default;
+
+
+bb-radio.disabled {
+  pointer-events:none;
+  color: $gray-400;
+}
+
+.ui-radio {
+  .custom-control-indicator {
+    border-radius: 50%;
+    background-color: $white;
+    width: 25px;
+    height: 25px;
+    border: 1.25px solid #d3d3d3;
+  }
+
+  .custom-control-description {
+    padding-top: 4px;
+    padding-left: 10px;
+  }
+
+  .custom-control-input {
+    &:focus ~ .custom-control-indicator {
+      // the mixin is not used here to make sure there is feedback
+      // $custom-control-focus-indicator-box-shadow
+      box-shadow: 0 0 0 1px $form-radio-border-color, 0 0 0 1.5px;
+    }
+  }
+
+  .custom-control-input:checked {
+    & ~ .custom-control-indicator {
+      color: $form-radio-border-color !important;
+      background-color: $white !important;
+      background-image: none;
+    }
+
+    & ~ .custom-control-indicator:after {
+      content: " ";
+      display: block;
+      background-color: $form-radio-border-color;
+      width: 13px;
+      height: 13px;
+      padding: 4px;
+      border-radius: 50%;
+      margin: 5px;
+    }
+  }
+
+  .custom-control-input:active ~ .custom-control-indicator {
+    background-color: transparent;
+  }
+}

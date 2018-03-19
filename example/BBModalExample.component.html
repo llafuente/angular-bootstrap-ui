@@ -1,0 +1,99 @@
+<h1>
+  Modals
+  <a href="https://getbootstrap.com/docs/4.0/components/modal/" target="_blank">
+    <i class="fa fa-external-link" aria-hidden="true"></i>
+  </a>
+</h1>
+
+<h3>Static modal (ngx-bootstrap)</h3>
+
+<button type="button" class="btn btn-primary" (click)="staticModal.show()">Static modal</button>
+
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Static modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This is static modal, backdrop click will not close it.
+        Click <b>&times;</b> to close modal.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h3>Static modal using bb-modal/bb-section-* (ngx-bootstrap)</h3>
+
+<button type="button" class="btn btn-primary" (click)="bbModal.show()">Static modal</button>
+
+<bb-modal
+  header="Static modal"
+  #bbModal>
+  <bb-section-content>
+    <p>This is static modal, backdrop click will not close it.</p>
+    <p>Click <b>&times;</b> to close modal (top-left)</p>
+    <p>Or click <a (click)="bbModal.hide()">here!</a></p>
+  </bb-section-content>
+  <bb-section-footer>
+    <div class="d-flex">
+      <bb-button (click)="bbModal.hide()">XXX</bb-button>
+      <bb-button (click)="bbModal.hide()" class="ml-auto">XXX</bb-button>
+    </div>
+  </bb-section-footer>
+</bb-modal>
+
+
+<h3>Confirm</h3>
+
+<button type="button" class="btn btn-primary" (click)="bbConfirm.show()">Direct Confirm</button>
+<button type="button" class="btn btn-primary" (click)="showConfirm()">Confirm via component</button>
+<button type="button" class="btn btn-primary" (click)="reset()">reset</button>
+
+<pre>bbConfirmResult: {{bbConfirmResultA | json}}
+bbConfirmResult (component): {{bbConfirmResultB | json}}</pre>
+
+<bb-confirm
+  header="Static modal"
+  #bbConfirm>
+  fdjshfksd fhskdfh skdjhf ksdfh kshfdksfd
+</bb-confirm>
+
+
+
+<h3>Confirm: custom button text</h3>
+
+<alert type="info">
+  NOTE: Button text will be translate
+</alert>
+
+<button type="button" class="btn btn-primary" (click)="bbConfirm2.show()">Direct Confirm</button>
+<button type="button" class="btn btn-primary" (click)="showConfirm2()">Confirm via component</button>
+<button type="button" class="btn btn-primary" (click)="reset()">reset</button>
+
+<pre>bbConfirmResult: {{bbConfirmResult2A | json}}
+bbConfirmResult (component): {{bbConfirmResult2B | json}}</pre>
+
+<bb-confirm
+  header="¿Qué hacer?"
+  accept="Sí"
+  cancel="datepicker.clear"
+  #bbConfirm2>
+  ¿Continua navegando?
+</bb-confirm>
+
+
+<h3>Confirm: using service</h3>
+
+<alert type="info" header="Note">
+  This can only display one confirm at a time.
+</alert>
+
+<button type="button" class="btn btn-primary" (click)="serviceShow()">show</button>
+
+<pre>serviceResult: {{serviceResult | json}}</pre>

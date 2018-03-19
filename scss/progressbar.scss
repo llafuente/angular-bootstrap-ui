@@ -1,0 +1,39 @@
+@keyframes progress-bar-loop0 {
+  0%   { left: -25%; }
+  100% { left: 275%; }
+}
+
+@keyframes progress-bar-loop1 {
+  0%   { left: -75%; }
+  100% { left: 200%; }
+}
+
+@keyframes progress-bar-loop2 {
+  0%   { left: -150%; }
+  100% { left: 150%; }
+}
+
+.progress-loop {
+  position: relative;
+
+  .progress-bar {
+    height: 8px;
+    position: absolute;
+    top: 4px;
+  }
+  & > .progress-bar:nth-child(3n+0) {
+    width: 25%;
+    animation: progress-bar-loop0 6s infinite;
+    animation-timing-function: linear;
+  }
+  & > .progress-bar:nth-child(3n+1) {
+    width: 25%;
+    animation: progress-bar-loop1 6s infinite;
+    animation-timing-function: linear;
+  }
+  & > .progress-bar:nth-child(3n+2) {
+    width: 25%;
+    animation: progress-bar-loop2 6s infinite;
+    animation-timing-function: linear;
+  }
+}

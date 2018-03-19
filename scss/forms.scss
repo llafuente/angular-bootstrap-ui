@@ -1,0 +1,190 @@
+// InputBox__PublicWebStyleGuide.pdf
+//  _____ _____ _____ _____ _____ _____
+// |     |   | |  _  |  |  |_   _|   __|
+// |-   -| | | |   __|  |  | | | |__   |
+// |_____|_|___|__|  |_____| |_| |_____|
+
+$form-control-bordered: $gray-200 !default;
+$form-control-bordered-hover: $gray-400 !default;
+
+$input-color: $gray-600;
+$input-border-radius: 1px;
+$input-btn-border-width: 0;
+$input-disabled-bg: transparent;
+$input-bg: transparent;
+$input-group-addon-bg: transparent;
+$input-padding-x: 1rem; // CHANGE from 20px
+$input-btn-padding-x: 1rem; // changed in bootstrap-beta
+$input-padding-y: 0.5rem; // CHANGE from 10px
+$input-btn-padding-y: 0.5rem; // changed in bootstrap-beta
+
+.form-control-container {
+  .form-group {
+    position: relative;
+    // change remove background, use border bottom instead
+    //background-color: $gray-100;
+    border-bottom: 1px dotted $gray-300;
+
+    // this gives some extra space for label to comeback
+    &:before {
+      content: " ";
+      display: block;
+      height: 1rem;
+      width: 100%;
+    }
+    label {
+      pointer-events: none;
+      position: absolute;
+      top: $input-padding-y + 1rem;
+      left: 1rem;
+      transition: 0.3s all ease-out;
+      color: $gray-400;
+      z-index: 3; // put the label above input background
+    }
+    /*
+    label.form-label-lg {
+      top: $input-padding-y-lg + 1rem;
+    }
+    label.form-label-sm {
+      top: $input-padding-y-sm + 1rem;
+    }
+    */
+  }
+
+  .has-danger.form-group {
+    border-bottom: 1px dotted $red;
+  }
+
+  &.always-focused, // this is the way to force no animation
+  &.focused, // set when focus start
+  &.notempty { // set when there is content in the input
+    label {
+      pointer-events: none;
+      position: absolute;
+      top: 0rem;
+      left: 0;
+      font-size: 0.75rem;
+      color: $gray-500;
+    }
+  }
+  select {
+    option {
+      background-color: $gray-100;
+      border-bottom: 1px solid $gray-300;
+    }
+  }
+
+  input, select {
+    min-height: 40px;
+  }
+
+  $ta-line-height: 16px * 1.25;
+  textarea {
+    line-height: 1.25rem;
+    /* old method.
+
+    background-image: -moz-linear-gradient(top , transparent, transparent ($ta-line-height - 1px), $gray-100 0px) !important;
+    background-image: -webkit-linear-gradient(top , transparent, transparent ($ta-line-height - 1px), $gray-100 0) !important;
+    background-size: 100% $ta-line-height;
+    background-repeat: repeat;
+    */
+
+    background-image: repeating-linear-gradient(transparent, transparent ($ta-line-height - 2px), $gray-100 ($ta-line-height - 1px), $gray-100 $ta-line-height) !important;
+
+    background-position-y: 8px;
+    background-repeat: no-repeat;
+  }
+}
+
+// restore pointer event for checkboxes inside a bb-static
+.form-control-container {
+  label.custom-control {
+    pointer-events: all;
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+.form-control-container.focused {
+  .form-group {
+    border-bottom: 1px dotted $gray-500;
+  }
+}
+
+.form-controls-bordered {
+  .form-control-container {
+    .form-control {
+      border: 1px solid $form-control-bordered;
+    }
+    .form-control:focus {
+      border: 1px solid $form-control-bordered-hover;
+    }
+    .form-group {
+      border-bottom: 0px dotted $gray-300;
+    }
+    .has-sucess {
+      .form-control {
+        box-shadow: inset 4px 0 0 $green;
+      }
+    }
+    .has-danger {
+      .form-control {
+        box-shadow: inset 4px 0 0 $red;
+      }
+    }
+  }
+}
+
+.form-control-container.condensed {
+  label {
+    display: none;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .form-group:before {
+    height: 0;
+  }
+  .form-control {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+
+.input-group label {
+  display: flex;
+}
+
+.form-group-required {
+  label:after {
+    content: ' *';
+    color: $red;
+  }
+}
+
+.form-group-disabled {
+  label {
+    color: $gray-300 !important;
+  }
+  input {
+    color: $gray-400;
+  }
+}
+
+bb-static {
+  & .form-control-static {
+    padding-bottom: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    min-height: 24px;
+  }
+  &.notempty .form-control-static {
+    min-height: 1.5rem; /* TODO REVIEW why 1.5rem? should be 1 or 1.25 */
+  }
+}
+
+// remove padding because color won't be displayed otherwise
+input.form-control[type="color"] {
+  padding: 0;
+}

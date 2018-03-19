@@ -1,0 +1,84 @@
+<h1>
+  Buttons
+  <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_blank">
+    <i class="fa fa-external-link" aria-hidden="true"></i>
+  </a>
+</h1>
+
+
+<h3>Filled buttons</h3>
+
+<bb-button>Primary</bb-button>
+<bb-button
+  btn="secondary">Secondary</bb-button>
+<bb-button
+  btn="info">Info</bb-button>
+<bb-button
+  btn="success">Success</bb-button>
+<bb-button
+  btn="warning">Warning</bb-button>
+<bb-button
+  btn="danger">Danger</bb-button>
+
+
+<h3>Outline buttons</h3>
+
+<bb-button
+  btn="outline-primary">Primary</bb-button>
+<bb-button
+  btn="outline-secondary">Secondary</bb-button>
+<bb-button
+  btn="outline-info">Info</bb-button>
+<bb-button
+  btn="outline-success">Success</bb-button>
+<bb-button
+  btn="outline-warning">Warning</bb-button>
+<bb-button
+  btn="outline-danger">Danger</bb-button>
+
+
+<h3>Disabled buttons</h3>
+
+<bb-button
+  [disabled]="true" (click)="throwErr()">Primary</bb-button>
+<bb-button
+  [disabled]="true"
+  btn="secondary" (click)="throwErr()">Secondary</bb-button>
+<bb-button
+  [disabled]="true"
+  btn="info" (click)="throwErr()">Info</bb-button>
+<bb-button
+  [disabled]="true"
+  btn="success" (click)="throwErr()">Success</bb-button>
+<bb-button
+  [disabled]="true"
+  btn="warning" (click)="throwErr()">Warning</bb-button>
+<bb-button
+  [disabled]="true"
+  btn="danger" (click)="throwErr()">Danger</bb-button>
+
+<!--
+<h3>Align buttons with inputs</h3>
+
+<div class="row">
+  <div class="col-8">
+    <bb-input-container label="label text!">
+      <input bb-child [(ngModel)]="str" />
+    </bb-input-container>
+  </div>
+  <div class="col-4">
+    <bb-button [inputAligned]="true">Primary</bb-button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-8">
+    <bb-input-container label="label text!" class="bordered">
+      <input bb-child [(ngModel)]="str" />
+    </bb-input-container>
+  </div>
+  <div class="col-4">
+    <bb-button [inputAligned]="true">Primary</bb-button>
+  </div>
+</div>
+-->

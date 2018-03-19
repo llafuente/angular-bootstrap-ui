@@ -1,0 +1,34 @@
+// InputBox__PublicWebStyleGuide.pdf
+//  _____ _____ _____ _____ _____ _____
+// |     |   | |  _  |  |  |_   _|   __|
+// |-   -| | | |   __|  |  | | | |__   |
+// |_____|_|___|__|  |_____| |_| |_____|
+
+bb-datepicker {
+  datepicker {
+    .card {
+      margin-bottom: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none;
+      border: 0;
+    }
+  }
+
+  .tooltip {
+    pointer-events: auto; //all
+  }
+
+  .tooltip-inner {
+    box-shadow: $card-shadow;
+    color: inherit !important;
+    max-width: none !important;
+    background-color: white !important;
+    padding: 4px !important;
+  }
+  .tooltip.show {
+    opacity: 1;
+  }
+}
+/*
+  z-index: 1040;
+*/

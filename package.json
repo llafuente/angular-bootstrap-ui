@@ -1,0 +1,27 @@
+{
+  "name": "angular-bootstrap-ui",
+  "version": "0.0.1",
+  "description": "Angular (+5) Bootstrap ui: content",
+  "scripts": {},
+  "author": {
+    "name": "Luis Lafuente Morales",
+    "email": "llafuente@noboxout.com",
+    "url": "https://github.com/llafuente"
+  },
+  "peerDependencies": {
+    "bootstrap": "4.0.0-beta",
+    "font-awesome": "4.7.0",
+    "ng2-toasty": "4.0.3",
+    "ngx-bootstrap": "2.0.3",
+    "@angular/core": ">=5.0.0"
+  },
+  "dependencies": {
+    "ftellipsis": "0.2.3",
+    "ng2-translate": "5.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3"
+  }
+}
