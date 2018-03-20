@@ -1,6 +1,6 @@
 {
   "name": "angular-bootstrap-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular (+5) Bootstrap ui: content",
   "scripts": {},
   "author": {
@@ -19,7 +19,9 @@
     "ftellipsis": "0.2.3",
     "ng2-translate": "5.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "angular-common-module": "0.0.1"
+  },
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3"

@@ -19,7 +19,7 @@ import {
   BBTablesExampleComponent,
   BBCardExampleComponent,
 } from "./example.module";
-import { RootComponent } from "thin2-common/src/Root.component";
+import { RootComponent } from "angular-common-module/src/Root.component";
 import { Resolve5s } from "./example/Resolve5s";
 
 const routes: RoutesWithBreadcrumbs = [
@@ -182,4 +182,4 @@ console.log(routes);
   declarations: [RootComponent],
   providers: [Resolve5s]
 })
-export class BuiContentExampleRoutes {}
+export class BootstrapUIExampleRouteModule {}
