@@ -107,12 +107,17 @@ export { BBFooterComponent } from "./src/components/layout/BBFooter.component";
 import { BBLayoutComponent } from "./src/components/layout/BBLayout.component";
 export { BBLayoutComponent } from "./src/components/layout/BBLayout.component";
 
+import { GetErrorPipe } from "./src/pipes/getError.pipe";
+export { GetErrorPipe } from "./src/pipes/getError.pipe";
 import { IsErrorPipe } from "./src/pipes/IsError.pipe";
 export { IsErrorPipe } from "./src/pipes/IsError.pipe";
 import { IsLoadingPipe } from "./src/pipes/IsLoading.pipe";
 export { IsLoadingPipe } from "./src/pipes/IsLoading.pipe";
 import { IsSuccessPipe } from "./src/pipes/IsSuccess.pipe";
 export { IsSuccessPipe } from "./src/pipes/IsSuccess.pipe";
+
+// utils
+export { aggregateSubjects } from "./src/utils/aggregateSubjects";
 
 
 export const imports = [
@@ -170,6 +175,7 @@ export const declarations = [
 
   BBTableComponent,
 
+  GetErrorPipe,
   IsErrorPipe,
   IsLoadingPipe,
   IsSuccessPipe,

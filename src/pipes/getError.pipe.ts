@@ -9,10 +9,10 @@ import { Subject } from "rxjs/Subject";
 import { Subscription } from "rxjs/Subscription";
 
 @Pipe({
-  name: "isError",
+  name: "getError",
   pure: false
 })
-export class IsErrorPipe implements OnDestroy, PipeTransform {
+export class GetErrorPipe implements OnDestroy, PipeTransform {
   result: Error = null;
   subject: Subject<any> = null;
   subscription: Subscription = null;
@@ -25,7 +25,7 @@ export class IsErrorPipe implements OnDestroy, PipeTransform {
     }
   }
 
-  transform(value: Subject<any>): boolean | null {
+  transform(value: Subject<any>): Error | null {
     if (!this.subject) {
       if (value instanceof Subject) {
         this.subject = value;
@@ -49,6 +49,6 @@ export class IsErrorPipe implements OnDestroy, PipeTransform {
       return this.transform(value);
     }
 
-    return !!this.result;
+    return this.result;
   }
 }
