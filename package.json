@@ -15,6 +15,7 @@
     "ngx-bootstrap": "2.0.3",
     "@angular/core": ">=5.0.0"
   },
+  "license": "MIT",
   "dependencies": {
     "ftellipsis": "0.2.3",
     "ng2-translate": "5.0.0"
