@@ -5,7 +5,7 @@ import * as ftellipsis from "ftellipsis";
   selector: "bb-ellipsis",
   template: `
 <div>
-  <div [style.maxHeight]="height + 'px'">
+  <div [style.height]="height + 'px'">
     <ng-content></ng-content>
   </div>
 </div>
