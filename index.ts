@@ -2,7 +2,6 @@ import { CommonModule } from "@angular/common";
 import { ModuleWithProviders, NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { FormsModule, NgModel } from "@angular/forms";
-import { ToastyConfig, ToastyModule } from "ng2-toasty";
 
 import { TooltipModule } from "ngx-bootstrap/tooltip";
 import { AlertModule } from "ngx-bootstrap/alert";

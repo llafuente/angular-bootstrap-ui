@@ -9,9 +9,9 @@
     "url": "https://github.com/llafuente"
   },
   "peerDependencies": {
+    "angular-common-module": ">=0.0.1",
     "bootstrap": "4.0.0-beta",
     "font-awesome": "4.7.0",
-    "ng2-toasty": "4.0.3",
     "ngx-bootstrap": "2.0.3",
     "@angular/core": ">=5.0.0"
   },
@@ -21,7 +21,6 @@
     "ng2-translate": "5.0.0"
   },
   "devDependencies": {
-    "angular-common-module": "0.0.1"
   },
   "engines": {
     "node": ">= 6.0.0",

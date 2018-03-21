@@ -19,7 +19,7 @@ import {
   BBTablesExampleComponent,
   BBCardExampleComponent,
 } from "./example.module";
-import { RootComponent } from "angular-common-module/src/Root.component";
+import { RootComponent } from "angular-common-module";
 import { Resolve5s } from "./example/Resolve5s";
 
 const routes: RoutesWithBreadcrumbs = [

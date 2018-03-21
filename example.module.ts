@@ -2,7 +2,6 @@ import { CommonModule } from "@angular/common";
 import { ModuleWithProviders, NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { FormsModule, NgModel } from "@angular/forms";
-import { ToastyConfig, ToastyModule } from "ng2-toasty";
 
 import { BootstrapUIModule } from './index';
 
@@ -42,14 +41,16 @@ export { BBModalExampleComponent } from "./example/BBModalExample.component";
 import { BBTablesExampleComponent } from "./example/BBTableExample.component";
 export { BBTablesExampleComponent } from "./example/BBTableExample.component";
 
-import { BuiContentExampleRoutes } from './example.routes';
+import { BootstrapUIExampleRouteModule } from './example.routes';
+import { AngularCommonModule } from 'angular-common-module';
 
 export const imports = [
   CommonModule,
   FormsModule,
   RouterModule,
   BootstrapUIModule,
-  BuiContentExampleRoutes,
+  BootstrapUIExampleRouteModule,
+  AngularCommonModule,
 ];
 
 export const declarations = [

@@ -4,7 +4,15 @@ Complete UI toolkit using bootstrap 4 for Angular 5+.
 
 Built on top of ngx-bootstrap.
 
-# Angular import
+# Usage
+
+## Install
+
+```
+npm i --save "angular-bootstrap-ui" "bootstrap@4.0.0-beta" "font-awesome@4.7.0"  "ngx-bootstrap@2.0.3"
+```
+
+We use peerDependencies instead of dependencies to manage out dependencies
 
 # SCSS import
 
@@ -19,4 +27,6 @@ $fa-font-path: "~font-awesome/fonts";
 @import '~angular-bootstrap-ui/scss/index';
 @import '~bootstrap/scss/bootstrap.scss';
 ```
+
+
 
