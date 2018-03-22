@@ -18,6 +18,7 @@ import {
   BBInputsExampleComponent,
   BBTablesExampleComponent,
   BBCardExampleComponent,
+  BBBadgesExampleComponent,
 } from "./example.module";
 import { RootComponent } from "angular-common-module";
 import { Resolve5s } from "./example/Resolve5s";
@@ -32,6 +33,13 @@ const routes: RoutesWithBreadcrumbs = [
         component: BBContentExampleComponent,
         data: {
           breadcrumb: "content",
+        }
+      },
+      {
+        path: "badges",
+        component: BBBadgesExampleComponent,
+        data: {
+          breadcrumb: "Badges",
         }
       },
       {
@@ -175,11 +183,11 @@ const routes: RoutesWithBreadcrumbs = [
     ]
   },
 ];
-console.log(routes);
+
 @NgModule({
   imports: [RouterModule.forRoot(routes as Routes, { useHash: true })],
   exports: [RouterModule],
-  declarations: [RootComponent],
+  declarations: [],
   providers: [Resolve5s]
 })
 export class BootstrapUIExampleRouteModule {}
