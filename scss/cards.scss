@@ -13,6 +13,10 @@ $card-cap-bg: $white;
 // this allow to expand card vertically
 bb-card, bb-card-collapsable {
   display: flex;
+
+  .card-header h2 {
+    margin: 0;
+  }
 }
 
 $card-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12) !default;
@@ -49,32 +53,24 @@ $card-half-shadow: 0 1.5px 0.5px -1px rgba(0,0,0,.1), 0 1px 1px 0 rgba(0,0,0,.07
     margin: 0;
   }
 }
-.card-collapsable {
-  .card-header {
-    cursor: pointer;
-    .card-indicator {
-      float: right;
-      padding-top: $card-indicator-top;
+bb-card-collapsable > div.card > div.card-header {
+  cursor: pointer;
+  .card-indicator {
+    float: right;
+    padding-top: $card-indicator-top;
 
-      .card-opened-icon:after {
-        @include fa-icon();
-        content: $fa-var-angle-up;
-        color: $gray-600;
-        font-size: 2rem;
-      }
-      .card-closed-icon:after {
-        @include fa-icon();
-        content: $fa-var-angle-down;
-        color: $card-header-font-color;
-        font-size: 2rem;
-      }
+    .card-opened-icon:after {
+      @include fa-icon();
+      content: $fa-var-angle-up;
+      color: $gray-600;
+      font-size: 2rem;
     }
-  }
-}
-
-bb-card, bb-card-collapsable {
-  .card-header h2 {
-    margin: 0;
+    .card-closed-icon:after {
+      @include fa-icon();
+      content: $fa-var-angle-down;
+      color: $card-header-font-color;
+      font-size: 2rem;
+    }
   }
 }
 
