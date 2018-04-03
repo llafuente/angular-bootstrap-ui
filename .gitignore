@@ -1,2 +1,5 @@
 # npm
 /node_modules
+# cannot commit this file because internally we use artifactory
+# to handle deps... what a mess!
+package-lock.json
