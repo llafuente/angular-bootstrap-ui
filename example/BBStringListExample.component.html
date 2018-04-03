@@ -1,0 +1,67 @@
+<h1>String list control</h1>
+
+<h2>Default</h2>
+<bb-string-list
+  class="form-control-container bordered"
+  label="Authorized user list"
+  inputLabel="User to add"
+  buttonLabel="Add User"
+  help="U00000, XE00000"
+  name="userlist"
+  (onAdd)="onAdd(events, $event)"
+  (onRemove)="onRemove(events, $event)"
+  [(ngModel)]="userlist"
+  [unique]="true">
+</bb-string-list>
+
+<h2>Disabled</h2>
+<bb-string-list
+  class="form-control-container bordered"
+  label="Authorized user list"
+  inputLabel="User to add"
+  buttonLabel="Add User"
+  help="U00000, XE00000"
+  name="userlist"
+  (onAdd)="onAdd(events, $event)"
+  (onRemove)="onRemove(events, $event)"
+  [(ngModel)]="userlist"
+  [unique]="true"
+  [disabled]="true">
+</bb-string-list>
+
+<h2>Log</h2>
+<bb-button (click)="reset()">Reset</bb-button>
+<pre>userlist: {{userlist | json}}</pre>
+<pre>events: {{events | json}}</pre>
+
+
+
+<h1>String list control with autocomplete</h1>
+
+<ng-template #customItemTemplate let-model="item" let-index="index">
+  <p>{{model}}</p>
+</ng-template>
+
+
+<bb-autocomplete-list
+  class="form-control-container bordered"
+  label="Categorías"
+  inputLabel="Añadir categoría"
+  emptyMessage="No se ha añadido ninguna categoría"
+  buttonLabel="Añadir categoría"
+  help="U00000, XE00000"
+  name="userlist"
+  [typeahead]="allCategories"
+  [typeaheadItemTemplate]="customItemTemplate"
+  (onAdd)="onAdd(events2, $event)"
+  (onRemove)="onRemove(events2, $event)"
+  [(ngModel)]="categories"
+  [unique]="true">
+</bb-autocomplete-list>
+
+<bb-button (click)="reset()">Reset</bb-button>
+<pre>autocomplete: {{allCategories | json}}</pre>
+<pre>categories: {{categories | json}}</pre>
+<pre>events: {{events2 | json}}</pre>
+
+

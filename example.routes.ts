@@ -21,6 +21,10 @@ import {
   BBBadgesExampleComponent,
   BBTypographyExampleComponent,
   BBToastExampleComponent,
+  BBAlertsExampleComponent,
+  BBTabsExampleComponent,
+  BBListsExampleComponent,
+  BBStringListExampleComponent
 } from "./example.module";
 import { RootComponent } from "angular-common-module";
 import { Resolve5s } from "./example/Resolve5s";
@@ -30,6 +34,13 @@ const routes: RoutesWithBreadcrumbs = [
     path: "content",
     component: RootComponent,
     children: [
+      {
+        path: "lists",
+        component: BBListsExampleComponent,
+        data: {
+          breadcrumb: "Lists",
+        }
+      },
       {
         path: "typography",
         component: BBTypographyExampleComponent,
@@ -56,6 +67,13 @@ const routes: RoutesWithBreadcrumbs = [
         component: BBTablesExampleComponent,
         data: {
           breadcrumb: "Tables",
+        }
+      },
+      {
+        path: "alerts",
+        component: BBAlertsExampleComponent,
+        data: {
+          breadcrumb: "alerts",
         }
       },
     ]
@@ -99,6 +117,13 @@ const routes: RoutesWithBreadcrumbs = [
           breadcrumb: "Validators",
         }
       },
+      {
+        path: "stringlist",
+        component: BBStringListExampleComponent,
+        data: {
+          breadcrumb: "String list",
+        }
+      },
     ]
   },
   {
@@ -121,6 +146,13 @@ const routes: RoutesWithBreadcrumbs = [
         component: BBToastExampleComponent,
         data: {
           breadcrumb: "Toast",
+        }
+      },
+      {
+        path: "tabs",
+        component: BBTabsExampleComponent,
+        data: {
+          breadcrumb: "Cards",
         }
       },
     ]

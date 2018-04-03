@@ -8,6 +8,7 @@ import { TooltipModule } from "ngx-bootstrap/tooltip";
 import { AlertModule } from "ngx-bootstrap/alert";
 import { DatepickerModule } from "ngx-bootstrap/datepicker";
 import { ModalModule } from "ngx-bootstrap/modal";
+import { TypeaheadModule } from "ngx-bootstrap/typeahead";
 
 import { TranslateModule, TranslateService } from 'ng2-translate';
 export * from "ng2-translate";
@@ -84,6 +85,14 @@ export { BBTextareaAutosize } from "./src/components/forms/BBTextareaAutosize.di
 import { BBDatepickerComponent } from "./src/components/forms/BBDatepicker.component";
 export { BBDatepickerComponent } from "./src/components/forms/BBDatepicker.component";
 
+// custom
+
+import { BBStringListControlComponent } from "./src/components/forms/BBStringListControl.component";
+export { BBStringListControlComponent } from "./src/components/forms/BBStringListControl.component";
+
+import { BBListAutocompleteControlComponent } from "./src/components/forms/BBListAutocompleteControl.component";
+export { BBListAutocompleteControlComponent } from "./src/components/forms/BBListAutocompleteControl.component";
+
 // errors
 import { BBErrorsComponent } from "./src/components/forms/BBErrors.component";
 export { BBErrorsComponent } from "./src/components/forms/BBErrors.component";
@@ -135,6 +144,7 @@ export const imports = [
   AlertModule.forRoot(),
   DatepickerModule.forRoot(),
   ModalModule.forRoot(),
+  TypeaheadModule.forRoot(),
 
   ToastyModule.forRoot(),
 ];
@@ -170,6 +180,10 @@ export const declarations = [
   BBChildComponent,
   BBTextareaAutosize,
   BBDatepickerComponent,
+
+  BBStringListControlComponent,
+  BBListAutocompleteControlComponent,
+
   BBErrorsComponent,
 
   BBModalComponent,
@@ -206,6 +220,7 @@ export const declarations = [
     AlertModule,
     DatepickerModule,
     ModalModule,
+    TypeaheadModule,
 
     ToastyModule,
   ],

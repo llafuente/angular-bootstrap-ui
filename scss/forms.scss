@@ -191,3 +191,12 @@ bb-static {
 input.form-control[type="color"] {
   padding: 0;
 }
+
+
+bb-string-list /*bb-autocomplete-list*/ {
+  input {
+    border-bottom: 1px dotted $gray-300 !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
