@@ -12,6 +12,8 @@
 @import './layout.scss';
 @import './table.scss';
 
+@import '~ng2-toasty/style-bootstrap.css';
+
 // fix flickering
 .tooltip {
   pointer-events:none;

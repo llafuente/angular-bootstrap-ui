@@ -20,6 +20,7 @@ import {
   BBCardExampleComponent,
   BBBadgesExampleComponent,
   BBTypographyExampleComponent,
+  BBToastExampleComponent,
 } from "./example.module";
 import { RootComponent } from "angular-common-module";
 import { Resolve5s } from "./example/Resolve5s";
@@ -113,6 +114,13 @@ const routes: RoutesWithBreadcrumbs = [
         component: BBModalExampleComponent,
         data: {
           breadcrumb: "Modals",
+        }
+      },
+      {
+        path: "toast",
+        component: BBToastExampleComponent,
+        data: {
+          breadcrumb: "Toast",
         }
       },
     ]

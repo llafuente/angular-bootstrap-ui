@@ -1,3 +1,4 @@
+import { BrowserModule } from "@angular/platform-browser";
 import { CommonModule } from "@angular/common";
 import { ModuleWithProviders, NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
@@ -9,6 +10,9 @@ import { DatepickerModule } from "ngx-bootstrap/datepicker";
 import { ModalModule } from "ngx-bootstrap/modal";
 
 import { TranslateModule, TranslateService } from 'ng2-translate';
+export * from "ng2-translate";
+import { ToastyModule } from "ng2-toasty";
+export * from "ng2-toasty";
 
 import { BBEllipsisComponent } from "./src/components/BBEllipsis.component";
 export { BBEllipsisComponent } from "./src/components/BBEllipsis.component";
@@ -120,6 +124,8 @@ export { aggregateSubjects } from "./src/utils/aggregateSubjects";
 
 
 export const imports = [
+  BrowserModule,
+
   CommonModule,
   FormsModule,
   RouterModule,
@@ -129,6 +135,8 @@ export const imports = [
   AlertModule.forRoot(),
   DatepickerModule.forRoot(),
   ModalModule.forRoot(),
+
+  ToastyModule.forRoot(),
 ];
 
 export const declarations = [
@@ -189,6 +197,8 @@ export const declarations = [
     BBConfirmService,
   ],
   exports: [
+    BrowserModule,
+
     ...declarations,
     TranslateModule,
 
@@ -196,6 +206,8 @@ export const declarations = [
     AlertModule,
     DatepickerModule,
     ModalModule,
+
+    ToastyModule,
   ],
 })
 export class BootstrapUIModule {

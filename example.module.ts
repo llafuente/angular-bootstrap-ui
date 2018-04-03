@@ -44,6 +44,9 @@ export { BBTablesExampleComponent } from "./example/BBTableExample.component";
 import { BBTypographyExampleComponent } from "./example/BBTypographyExample.component";
 export { BBTypographyExampleComponent } from "./example/BBTypographyExample.component";
 
+import { BBToastExampleComponent } from "./example/BBToastExample.component";
+export { BBToastExampleComponent } from "./example/BBToastExample.component";
+
 import { BootstrapUIExampleRouteModule } from './example.routes';
 import { AngularCommonModule } from 'angular-common-module';
 
@@ -71,6 +74,7 @@ export const declarations = [
   BBModalExampleComponent,
   BBTablesExampleComponent,
   BBTypographyExampleComponent,
+  BBToastExampleComponent,
 
 ];
 

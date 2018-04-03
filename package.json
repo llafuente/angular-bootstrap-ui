@@ -13,6 +13,7 @@
   "peerDependencies": {
     "bootstrap": "4.0.0",
     "font-awesome": "4.7.0",
+    "ng2-toasty": "4.0.3",
     "ngx-bootstrap": "2.0.3",
     "@angular/core": ">=5.0.0"
   },
