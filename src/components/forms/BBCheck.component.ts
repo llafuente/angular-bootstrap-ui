@@ -10,37 +10,32 @@ const BBCheckModelValueAccessor = {
 };
 
 @Component({
-  selector: "bb-check",
+  selector: "bb-check", //  ui-checkbox
   template: `
-<label
-  class="custom-control ui-checkbox"
-  [class.form-group-required]="required"
+<div class="custom-control custom-checkbox"
+  [class.form-control-required]="required"
   [class.has-danger]="model?.errors">
+
   <input
     id="{{name}}-id" class="custom-control-input"
     type="checkbox"
-    [name]="name"
+    [attr.name]="name"
     [(ngModel)]="boolModelValue"
     [required]="required"
     [disabled]="disabled"
     (ngModelChange)="writeValue(boolModelValue)"
     [ngModelOptions]="{standalone: true}" />
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description"><ng-content></ng-content></span>
-</label>
+  <label class="custom-control-label" [attr.for]="name + '-id'"><ng-content></ng-content></label>
+  <span class="custom-control-label-indicator"></span>
+</div>
 `,
   providers: [BBCheckModelValueAccessor],
 })
 export class BBCheckComponent extends BBCheckBase implements AfterViewInit {
   // required
-  @Input() name: string;
+  @Input() name: string = null;
 
-  @Input() label: string;
-  @Input() placeholder: string;
-
-  ngOnInit(): void {
-    this.placeholder = this.placeholder || "";
-  }
+  @Input() label: string = null;
 
   ngAfterViewInit(): void {
     if (!this.name) {

@@ -20,7 +20,7 @@
   <div class="col-6">
 
     <bb-check
-      name="check01"
+      name="check02"
       disabled="disabled"
       [(ngModel)]="checkboxes.check1"></bb-check>
 
@@ -36,14 +36,14 @@
   <div class="col-6">
 
     <bb-check
-      name="check01"
+      name="check03"
       [(ngModel)]="checkboxes.check2">Remember me?</bb-check>
 
   </div>
   <div class="col-6">
 
     <bb-check
-      name="check01"
+      name="check04"
       disabled="disabled"
       [(ngModel)]="checkboxes.check2">Remember me?</bb-check>
 
@@ -59,14 +59,14 @@
   <div class="col-6">
 
     <bb-check
-      name="check01"
+      name="check05"
       [(ngModel)]="checkboxes.check3">Remember me?</bb-check>
 
   </div>
   <div class="col-6">
 
     <bb-check
-      name="check01"
+      name="check06"
       disabled="disabled"
       [(ngModel)]="checkboxes.check3">Remember me?</bb-check>
 
@@ -82,14 +82,14 @@
 <pre>model: {{checkboxes.checkCV | json}}</pre>
 
 <bb-check
-  name="check01"
+  name="check07"
   true-value="Custom value!"
   [(ngModel)]="checkboxes.checkCV">Checkme for a string value!</bb-check>
 
 <pre>model: {{checkboxes.checkCV2 | json}}</pre>
 
 <bb-check
-  name="check01"
+  name="check08"
   false-value="Your accusation is false!"
   true-value="You can stand the truth!"
   [(ngModel)]="checkboxes.checkCV2">Checkme for a string value!</bb-check>
@@ -111,7 +111,7 @@ model: {{checkboxes.required | json}}
 </pre>
 
 <bb-check
-  name="check02"
+  name="check09"
   required="required"
   [false-value]="null"
   [(ngModel)]="checkboxes.required"
@@ -122,27 +122,26 @@ model: {{checkboxes.required | json}}
   [disabled]="!checksForm.valid">Valid?</bb-button>
 </form>
 
-
 <h1>Switch (style)</h1>
   <pre>switches: {{switches | json}}</pre>
 
   <bb-switch
-    name="switch01"
+    name="switch10"
     checkedMessage="check message"
     uncheckedkMessage="uncheck message"
     [(ngModel)]="switches.p1"></bb-switch>
   <bb-switch
-    name="switch02"
+    name="switch11"
     checkedMessage="check message"
     uncheckedkMessage="uncheck message"
     [(ngModel)]="switches.p1" color="red" switchColor="blue"></bb-switch>
   <bb-switch
-    name="switch03"
+    name="switch12"
     checkedMessage="check message"
     uncheckedkMessage="uncheck message"
     [(ngModel)]="switches.p1" color="red"></bb-switch>
   <bb-switch
-    name="switch04"
+    name="switch13"
     checkedMessage="check message"
     uncheckedkMessage="uncheck message"
     [(ngModel)]="switches.p1" switchColor="blue"></bb-switch>

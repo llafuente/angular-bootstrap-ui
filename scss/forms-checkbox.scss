@@ -1,63 +1,74 @@
 $form-checkbox-border-color: $blue !default;
+$custom-control-indicator-checked-disabled-bg: $gray-200;
+
+$form-checkbox-width: 1.5rem !default;
+$form-checkbox-height: 1.5rem !default;
 
 bb-check {
-  .form-check-label > span {
-    padding-left: 4px;
-  }
-}
-
-
-.ui-checkbox {
-  .custom-control-indicator {
-    width: 25px;
-    height: 25px;
-    background: none;
-    border: 1px solid #D3D3D3;
+  & .custom-control {
+    min-height: 2rem;
   }
 
-  .custom-control-input:disabled ~ .custom-control-indicator {
-    background-color: $gray-200;
+  // extra markup for required asterisk
+  & .form-control-required .custom-control-label-indicator:after {
+    content: ' *';
+    color: $red;
   }
 
-  .custom-control-description {
-    padding-left: 10px;
-    padding-top: 4px;
-  }
-
-  /*
-  .custom-control-input:checked ~ .custom-control-indicator {
-    background-image: $custom-checkbox-icon-checked;
-  }
-
-  .custom-control-input:indeterminate ~ .custom-control-indicator {
-    background-color: $custom-checkbox-indeterminate-bg;
-    background-image: $custom-checkbox-icon-indeterminate;
-    @include box-shadow($custom-checkbox-indeterminate-box-shadow);
-  }
-  */
-
-  .custom-control-input:checked {
-    & ~ .custom-control-indicator {
-      background-color: transparent !important;
-      background-image: none;
+  & .custom-checkbox {
+    .custom-control-label {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.5rem;
+      cursor: pointer;
+    }
+    // this give an extra space to click
+    .custom-control-label::after {
+      width: $form-checkbox-width;
+      height: $form-checkbox-height;
     }
 
-    &:disabled ~ .custom-control-indicator {
-      background-color: $gray-200 !important;
+    .custom-control-label::before {
+      @include border-radius(0);
     }
 
-    & ~ .custom-control-indicator:after {
-      @include fa-icon();
-      content: $fa-var-check;
-      color: $form-checkbox-border-color;
-      padding: 4px;
+    .custom-control-input ~ .custom-control-label {
+      &::before {
+        width: $form-checkbox-width;
+        height: $form-checkbox-height;
+        background: none;
+        border: 1px solid #D3D3D3;
+      }
     }
-  }
 
-  .custom-control-input:focus ~ .custom-control-indicator {
-    box-shadow: 0 0 0 1px $form-checkbox-border-color, 0 0 0 1.5px;
-  }
-  .custom-control-input:active ~ .custom-control-indicator {
-    background-color: transparent;
+    .custom-control-input:checked ~ .custom-control-label {
+      &::before {
+        background: none;
+      }
+
+      &::after {
+        background-image: none;
+
+        @include fa-icon();
+        content: $fa-var-check;
+        color: $form-checkbox-border-color;
+        padding: 6px;
+      }
+    }
+
+    .custom-control-input:indeterminate ~ .custom-control-label {
+      &::before {
+        @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
+        @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
+      }
+      &::after {
+        background-image: $custom-checkbox-indicator-icon-indeterminate;
+      }
+    }
+
+    .custom-control-input:focus ~ .custom-control-label::before {
+      box-shadow: 0 0 0 1px $form-checkbox-border-color, 0 0 0 1.5px;
+    }
+
   }
 }
