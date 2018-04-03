@@ -1,0 +1,35 @@
+<h1>
+  Tabs
+  <a href="https://getbootstrap.com/docs/4.0/components/navs/#tabs" target="_blank">
+    <i class="fa fa-external-link" aria-hidden="true"></i>
+  </a>
+</h1>
+
+
+<h5>Raw markup</h5>
+
+<ul class="nav nav-tabs ui-tabs">
+  <li class="nav-item">
+    <a class="nav-link active">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link">Link2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+
+<h5>You can use ngx-bootstrap!</h5>
+
+<div>
+  <tabset #staticTabs>
+    <tab heading="Static title">Static content</tab>
+    <tab heading="Static Title 1">Static content 1</tab>
+    <tab heading="Static Title 2">Static content 2</tab>
+    <tab heading="Static Title 3" removable="true">Static content 3</tab>
+  </tabset>
+</div>

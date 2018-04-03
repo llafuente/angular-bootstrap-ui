@@ -1,0 +1,14 @@
+<h1>
+  Alerts
+  <a href="https://getbootstrap.com/docs/4.0/components/alerts/" target="_blank">
+    <i class="fa fa-external-link" aria-hidden="true"></i>
+  </a>
+</h1>
+
+<div *ngFor="let alert of alerts">
+  <h5>{{alert}}</h5>
+
+  <alert [type]="alert" header="Header text">
+    <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+  </alert>
+</div>
