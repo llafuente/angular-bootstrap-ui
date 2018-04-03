@@ -1,5 +1,6 @@
 $form-checkbox-border-color: $blue !default;
 $custom-control-indicator-checked-disabled-bg: $gray-200;
+$form-checkbox-checked-padding: 4px !default;
 
 $form-checkbox-width: 1.5rem !default;
 $form-checkbox-height: 1.5rem !default;
@@ -52,7 +53,7 @@ bb-check {
         @include fa-icon();
         content: $fa-var-check;
         color: $form-checkbox-border-color;
-        padding: 6px;
+        padding: $form-checkbox-checked-padding;
       }
     }
 
