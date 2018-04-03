@@ -9,7 +9,7 @@ Built on top of ngx-bootstrap.
 ## Install
 
 ```
-npm i --save "angular-bootstrap-ui" "bootstrap@4.0.0-beta" "font-awesome@4.7.0"  "ngx-bootstrap@2.0.3"
+npm i --save "angular-bootstrap-ui" "bootstrap@4.0.0" "font-awesome@4.7.0"  "ngx-bootstrap@2.0.3"
 ```
 
 We use peerDependencies instead of dependencies to manage out dependencies
