@@ -19,6 +19,7 @@ import {
   BBTablesExampleComponent,
   BBCardExampleComponent,
   BBBadgesExampleComponent,
+  BBTypographyExampleComponent,
 } from "./example.module";
 import { RootComponent } from "angular-common-module";
 import { Resolve5s } from "./example/Resolve5s";
@@ -28,6 +29,13 @@ const routes: RoutesWithBreadcrumbs = [
     path: "content",
     component: RootComponent,
     children: [
+      {
+        path: "typography",
+        component: BBTypographyExampleComponent,
+        data: {
+          breadcrumb: "typography",
+        }
+      },
       {
         path: "content",
         component: BBContentExampleComponent,
