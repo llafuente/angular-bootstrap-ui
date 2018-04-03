@@ -9,9 +9,9 @@ import { BBChildComponent } from "./BBChild.component";
   template: `
 <div
   class="form-group"
-  [class.form-group-required]="required"
-  [class.form-group-disabled]="disabled"
-  [class.has-sucess]="child.ngControl?.errors === null"
+  [class.form-control-required]="required"
+  [class.form-control-disabled]="disabled"
+  [class.has-success]="child.ngControl?.errors === null"
   [class.has-danger]="child.ngControl?.errors !== null">
   <label
     [class.form-label-lg]="size == 'lg'"
@@ -21,12 +21,16 @@ import { BBChildComponent } from "./BBChild.component";
     class="form-control-container"
     [class.input-group]="addon || preAddon || postAddon">
     <div
-      class="input-group-addon"
-      *ngIf="preAddon">{{preAddon}}</div>
+      class="input-group-prepend"
+      *ngIf="preAddon">
+      <div class="input-group-text">{{preAddon}}</div>
+    </div>
     <ng-content></ng-content>
     <div
-      class="input-group-addon"
-      *ngIf="postAddon">{{postAddon}}</div>
+      class="input-group-append"
+      *ngIf="postAddon">
+      <div class="input-group-text">{{postAddon}}</div>
+    </div>
   </div>
   <small
     id="{{name}}-help" class="form-text text-muted"

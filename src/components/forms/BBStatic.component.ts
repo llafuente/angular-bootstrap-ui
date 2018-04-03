@@ -9,7 +9,7 @@ import { Component, HostBinding, Input } from "@angular/core";
     [class.form-label-sm]="size == 'sm'"
     *ngIf="label?.length">{{label}}</label>
   <div class="form-control-container">
-    <p class="form-control-static">
+    <p class="form-control-plaintext">
       <ng-content></ng-content>
     </p>
   </div>
