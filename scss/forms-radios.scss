@@ -1,32 +1,79 @@
 $form-radio-border-color: $blue !default;
 
+$form-radio-width: 1.5rem !default;
+$form-radio-height: 1.5rem !default;
+$form-radio-checked-indicator-width: 1rem !default;
+$form-radio-checked-indicator-height: 1rem !default;
 
-bb-radio.disabled {
-  pointer-events:none;
-  color: $gray-400;
-}
+$custom-control-indicator-checked-bg: $form-radio-border-color;
+$custom-control-indicator-checked-disabled-bg: $gray-400;
+$custom-radio-indicator-border-radius: 50%;
 
-.ui-radio {
-  .custom-control-indicator {
-    border-radius: 50%;
-    background-color: $white;
-    width: 25px;
-    height: 25px;
-    border: 1.25px solid #d3d3d3;
+
+bb-radio {
+  &.disabled {
+    pointer-events:none;
+    color: $gray-400;
   }
 
+
+  .custom-radio {
+    .custom-control-label {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.5rem;
+      cursor: pointer;
+    }
+
+    .custom-control-label::before {
+      background-color: $white;
+      width: $form-radio-width;
+      height: $form-radio-height;
+      border: 1.25px solid #d3d3d3;
+    }
+
+    // this give an extra space to click
+    .custom-control-label::after {
+      width: $form-radio-width;
+      height: $form-radio-height;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label {
+      &::before {
+        @include gradient-bg($custom-control-indicator-checked-bg);
+      }
+      &::after {
+        background-image: $custom-radio-indicator-icon-checked;
+        background-size: $form-radio-checked-indicator-width $form-radio-checked-indicator-height;
+        background-position: center;
+        width: $form-radio-width;
+        height: $form-radio-height;
+      }
+    }
+
+    .custom-control-input:disabled {
+      &:checked ~ .custom-control-label::before {
+        background-color: $custom-control-indicator-checked-disabled-bg;
+      }
+    }
+
+    .custom-control-input:focus ~ .custom-control-label::before {
+      box-shadow: 0 0 0 1px $form-radio-border-color, 0 0 0 1.5px;
+    }
+  }
+
+}
+
+
+
+
+.ui-radio {
   .custom-control-description {
     padding-top: 4px;
     padding-left: 10px;
   }
 
-  .custom-control-input {
-    &:focus ~ .custom-control-indicator {
-      // the mixin is not used here to make sure there is feedback
-      // $custom-control-focus-indicator-box-shadow
-      box-shadow: 0 0 0 1px $form-radio-border-color, 0 0 0 1.5px;
-    }
-  }
+
 
   .custom-control-input:checked {
     & ~ .custom-control-indicator {

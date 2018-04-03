@@ -8,37 +8,43 @@ const BBRadioModelValueAccessor = {
   useExisting: forwardRef(() => BBRadioComponent),
   multi: true,
 };
+// autoid counter
+let autoid = 0;
 
+/**
+ * Note: bb-radio don't have required itself
+ * because there is no a good way to position the asterisk
+ */
 @Component({
   selector: "bb-radio",
   template: `
-<label
-  class="custom-control ui-radio"
-  (click)="clicked()">
+<div class="custom-control custom-radio"
+  [class.form-control-required]="required"
+  [class.has-danger]="model?.errors">
+
   <input
+    [id]="id"
     class="custom-control-input"
     type="radio"
-    [name]="name"
+    [attr.name]="name"
     [value]="value"
     [checked]="isChecked()"
     [disabled]="disabled" />
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description">
-    <ng-content></ng-content>
-  </span>
-</label>
-
+  <label (click)="clicked()" class="custom-control-label" [attr.for]="id"><ng-content></ng-content></label>
+</div>
   `,
   providers: [BBRadioModelValueAccessor],
 })
 export class BBRadioComponent implements ControlValueAccessor {
-  // required
   @Input() name: string;
   @Input() value: string | number;
 
   @HostBinding("class.disabled")
   @Input()
   disabled: boolean;
+
+  @Input()
+  id: string = null;
 
   private _onTouchedCallback: () => void = noop;
   private _onChangeCallback: (_: any) => void = noop;
@@ -51,6 +57,10 @@ export class BBRadioComponent implements ControlValueAccessor {
 
     if (this.value === undefined) {
       throw new Error("bb-radio: value is required");
+    }
+
+    if (!this.id) {
+      this.id = this.name + (++autoid);
     }
   }
 
