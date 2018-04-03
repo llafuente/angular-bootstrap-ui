@@ -29,4 +29,30 @@ $fa-font-path: "~font-awesome/fonts";
 ```
 
 
+## External deps install
+
+Follow their instructions:
+
+### [ng2-toasty](https://github.com/akserg/ng2-toasty)
+
+This module require you to insert in your HTML:
+
+```html
+<ng2-toasty position="bottom-center"></ng2-toasty>
+```
+
+### [ngx-bootstrap](https://valor-software.com/ngx-bootstrap)
+
+ngx-bootstrap need to be configured in boostrap 4 mode:
+
+your index.html
+```
+<html>
+  <head>
+    <script>window.__theme = 'bs4';</script>
+  <!-- ... -->
+```
+
+To configure datepicker locale read [datepicker/locales](https://valor-software.com/ngx-bootstrap/#/datepicker#locales)
+
 
