@@ -193,10 +193,21 @@ input.form-control[type="color"] {
 }
 
 
-bb-string-list /*bb-autocomplete-list*/ {
+bb-string-list, bb-autocomplete-list {
   input {
     border-bottom: 1px dotted $gray-300 !important;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+bb-autocomplete-list {
+  .alert {
+    margin-bottom: 0px;
+  }
+
+  typeahead-container {
+    background-color: $white !important;
+    box-shadow: $card-shadow;
+    padding: 0 !important;
   }
 }

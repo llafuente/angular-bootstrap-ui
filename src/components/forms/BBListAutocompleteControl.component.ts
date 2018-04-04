@@ -24,52 +24,44 @@ const BBStringListModelValueAccessor = {
   selector: "bb-autocomplete-list",
   template: `
 
-<div class="form-control-container focused">
-  <div class="form-group">
-    <label>{{label}}</label>
-    <div class="row" *ngIf="modelValue?.length">
-      <ul class="list-ui ml-4 mt-1">
-        <li *ngFor="let val of modelValue; let i = index">
-          <span>{{val}}</span>
-          <a class="ml-2" [class.disabled]="disabled" (click)="removeString(i)">
-            <i class="fa fa-trash-o" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="row" *ngIf="!modelValue?.length">
-      <ul class="list-ui ml-4 mt-1">
-        <li class="text-muted">{{emptyMessage}}</li>
-      </ul>
+
+<bb-static [label]="label">
+
+  <div class="d-flex flex-wrap">
+    <div class="d-inline-flex align-items-center p-2" *ngFor="let val of modelValue; let i = index">
+      <span class="pr-1">{{val}}</span>
+      <a [class.disabled]="disabled" (click)="removeString(i)">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      </a>
     </div>
 
-    <div class="row">
-      <div class="col-8">
-      <bb-input-container
-        [label]="inputLabel"
-        [help]="help"
-        [size]="size">
+    <div class="d-inline-flex align-items-center p-2" *ngIf="!modelValue?.length">
+      <alert type="info">
+        {{emptyMessage}}
+      </alert>
+    </div>
 
-        <input
-          bb-child
-          type="text"
-          id="{{name}}-id"
-          [(ngModel)]="str"
-          [disabled]="disabled"
-          [typeahead]="typeahead"
-          [typeaheadItemTemplate]="typeaheadItemTemplate"
-          (keydown)="onKeyDown($event)"
-          #input
-          >
+    <div class="d-inline-flex align-items-center p-2">
+      <input
+        class="form-control d-inline-flex"
+        type="text"
+        [name]="name"
+        id="{{name}}-id"
+        [(ngModel)]="str"
+        [disabled]="disabled"
+        [typeahead]="typeahead"
+        [typeaheadItemTemplate]="typeaheadItemTemplate"
+        (keydown)="onKeyDown($event)"
+        autocomplete="off"
+        #input
+        />
 
-          </bb-input-container>
-        </div>
-        <div class="col-4">
-          <bb-button [inputAligned]="true" [disabled]="!str.length" (click)="addString()">{{buttonLabel}}</bb-button>
-        </div>
+        <bb-button [disabled]="disabled || !str.length" (click)="addString()">{{buttonLabel}}</bb-button>
+
     </div>
   </div>
-</div>
+
+</bb-static>
   `,
   providers: [BBStringListModelValueAccessor],
 })
