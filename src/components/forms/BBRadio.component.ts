@@ -19,8 +19,7 @@ let autoid = 0;
   selector: "bb-radio",
   template: `
 <div class="custom-control custom-radio"
-  [class.form-control-required]="required"
-  [class.has-danger]="model?.errors">
+  [class.form-control-required]="required">
 
   <input
     [id]="id"
@@ -29,7 +28,8 @@ let autoid = 0;
     [attr.name]="name"
     [value]="value"
     [checked]="isChecked()"
-    [disabled]="disabled" />
+    [disabled]="disabled"
+    [required]="required" />
   <label (click)="clicked()" class="custom-control-label" [attr.for]="id"><ng-content></ng-content></label>
 </div>
   `,
@@ -38,6 +38,8 @@ let autoid = 0;
 export class BBRadioComponent implements ControlValueAccessor {
   @Input() name: string;
   @Input() value: string | number;
+
+  @Input() required: boolean;
 
   @HostBinding("class.disabled")
   @Input()

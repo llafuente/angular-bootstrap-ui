@@ -6,6 +6,9 @@ import { Component } from "@angular/core";
 })
 export class BBRadiosExampleComponent {
   radios: any = {
-    radio0: true,
+    mixValues: true,
+    inlineRadio: 1,
+    disabledRadio: 2,
+    requiredRadio: 2,
   };
 }
