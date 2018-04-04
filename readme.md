@@ -4,6 +4,8 @@ Complete UI toolkit using bootstrap 4 for Angular 5+.
 
 Built on top of ngx-bootstrap.
 
+# [Changelog](https://github.com/llafuente/angular-bootstrap-ui/blob/master/CHANGELOG.md)
+
 # Usage
 
 ## Install
