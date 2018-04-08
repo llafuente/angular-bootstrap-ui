@@ -1,7 +1,7 @@
 import { Component, Input, ViewChild } from "@angular/core";
 import { ModalDirective } from "ngx-bootstrap/modal";
 import { BBConfirmService } from "./BBConfirm.service";
-import { BBConfirmComponent } from "./BBConfirm.component";
+import { BBConfirmComponent } from "../../components/modals/BBConfirm.component";
 import { Subject } from "rxjs/Subject";
 
 // NOTE: remove tabindex="-1" to remove ESC key dismissal

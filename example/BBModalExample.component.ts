@@ -1,5 +1,5 @@
 import { Component, ViewChild } from "@angular/core";
-import { BBConfirmComponent, BBConfirmService } from "../";
+import { BBConfirmComponent, BBConfirmService, BBAlertService } from "../";
 
 @Component({
   selector: "bb-card-example-component",
@@ -22,11 +22,12 @@ export class BBModalExampleComponent {
   bbConfirmResult2B: boolean = null;
 
   serviceResult: boolean;
-  header: string = "header";
-  text: string = "content text";
+  title: string = "title";
+  text: string = "content <strong>text</strong>";
 
   constructor(
-    public bBConfirmService: BBConfirmService
+    public bbConfirmService: BBConfirmService,
+    public bbAlertService: BBAlertService,
   ) {
 
   }
@@ -60,8 +61,20 @@ export class BBModalExampleComponent {
     this.bbConfirmResult2B = null;
   }
 
-  serviceShow() {
-    this.bBConfirmService.show(this.header, this.text).subscribe((response) => {
+  alertServiceShow() {
+    this.bbAlertService.show(this.title, this.text, false).subscribe((response) => {
+      this.serviceResult = response;
+    })
+  }
+
+  alertServiceShowHTML() {
+    this.bbAlertService.show(this.title, this.text, true).subscribe((response) => {
+      this.serviceResult = response;
+    })
+  }
+
+  confirmServiceShow() {
+    this.bbConfirmService.show(this.title, this.text).subscribe((response) => {
       this.serviceResult = response;
     })
   }

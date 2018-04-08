@@ -88,12 +88,34 @@ bbConfirmResult (component): {{bbConfirmResult2B | json}}</pre>
 </bb-confirm>
 
 
-<h3>Confirm: using service</h3>
+<h3>Alert modal: using service</h3>
+
+<alert type="info" header="Note">
+  This can only display one confirm at a time.
+  Can contain HTML
+</alert>
+
+
+<bb-input-container label="Modal title">
+  <input bb-child [(ngModel)]="title" />
+</bb-input-container>
+
+<bb-input-container label="Modal text">
+  <input bb-child [(ngModel)]="text" />
+</bb-input-container>
+
+<button type="button" class="btn btn-primary" (click)="alertServiceShow()">show TEXT</button>
+<button type="button" class="btn btn-primary" (click)="alertServiceShowHTML()">show HTML</button>
+
+<pre>serviceResult: {{serviceResult | json}}</pre>
+
+
+<h3>Confirm modal: using service</h3>
 
 <alert type="info" header="Note">
   This can only display one confirm at a time.
 </alert>
 
-<button type="button" class="btn btn-primary" (click)="serviceShow()">show</button>
+<button type="button" class="btn btn-primary" (click)="confirmServiceShow()">show</button>
 
 <pre>serviceResult: {{serviceResult | json}}</pre>

@@ -105,10 +105,14 @@ import { BBModalComponent } from "./src/components/modals/BBModal.component";
 export { BBModalComponent } from "./src/components/modals/BBModal.component";
 import { BBConfirmComponent } from "./src/components/modals/BBConfirm.component";
 export { BBConfirmComponent } from "./src/components/modals/BBConfirm.component";
-import { BBConfirmService } from "./src/components/modals/BBConfirm.service";
-export { BBConfirmService } from "./src/components/modals/BBConfirm.service";
-import { BBConfirmServiceComponent } from "./src/components/modals/BBConfirmService.component";
-export { BBConfirmServiceComponent } from "./src/components/modals/BBConfirmService.component";
+import { BBConfirmService } from "./src/services/confirm/BBConfirm.service";
+export { BBConfirmService } from "./src/services/confirm/BBConfirm.service";
+import { BBConfirmServiceComponent } from "./src/services/confirm/BBConfirmService.component";
+export { BBConfirmServiceComponent } from "./src/services/confirm/BBConfirmService.component";
+import { BBAlertService } from "./src/services/alert/BBAlert.service";
+export { BBAlertService } from "./src/services/alert/BBAlert.service";
+import { BBAlertServiceComponent } from "./src/services/alert/BBAlertService.component";
+export { BBAlertServiceComponent } from "./src/services/alert/BBAlertService.component";
 
 import { BBNavbarComponent } from "./src/components/layout/BBNavbar.component";
 export { BBNavbarComponent } from "./src/components/layout/BBNavbar.component";
@@ -189,6 +193,7 @@ export const declarations = [
   BBModalComponent,
   BBConfirmComponent,
   BBConfirmServiceComponent,
+  BBAlertServiceComponent,
 
   BBNavbarComponent,
   BBFooterComponent,
@@ -209,6 +214,7 @@ export const declarations = [
   providers: [
     BBErrorMessages,
     BBConfirmService,
+    BBAlertService,
   ],
   exports: [
     BrowserModule,

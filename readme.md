@@ -6,6 +6,11 @@ Built on top of ngx-bootstrap.
 
 # [Changelog](https://github.com/llafuente/angular-bootstrap-ui/blob/master/CHANGELOG.md)
 
+# Documentation
+
+* [bb-alert-service &amp; BBAlertService](src/services/alert/README.md)
+* [bb-confirm-service &amp; BBConfirmService](src/services/alert/README.md)
+
 # Usage
 
 ## Install
