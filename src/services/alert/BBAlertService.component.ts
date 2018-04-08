@@ -77,10 +77,10 @@ export class BBAlertServiceComponent implements OnDestroy, OnInit {
     return this.lastSubject;
   }
 
-  hide(result: boolean): Subject<null> {
+  hide(result: boolean): void {
     this.notifyCloseOnce();
 
-    return this.bbModal.hide();
+    this.bbModal.hide();
   }
 }
 
