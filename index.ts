@@ -53,6 +53,8 @@ export { BBButtonComponent } from "./src/components/BBButton.component";
 
 import { NoCommaDirective } from "./src/directives/NoComma.directive";
 export { NoCommaDirective } from "./src/directives/NoComma.directive";
+import { EmptyIsNullDirective } from "./src/directives/EmptyIsNull.directive";
+export { EmptyIsNullDirective } from "./src/directives/EmptyIsNull.directive";
 
 import { BBTableComponent } from "./src/components/BBTable.component";
 export { BBTableComponent } from "./src/components/BBTable.component";
@@ -174,6 +176,7 @@ export const declarations = [
   BBButtonComponent,
 
   NoCommaDirective,
+  EmptyIsNullDirective,
 
   BBCheckComponent,
   BBCheckComponent,

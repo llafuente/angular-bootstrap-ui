@@ -10,7 +10,7 @@ import {
   BBContentExampleComponent,
   BBBreadcrumbExampleComponent,
   BBLoadingPageExampleComponent,
-  BBValidatorsExampleComponent,
+  BBDirectivesExampleComponent,
   BBButtonExampleComponent,
   BBModalExampleComponent,
   BBCheckboxesExampleComponent,
@@ -111,8 +111,8 @@ const routes: RoutesWithBreadcrumbs = [
         }
       },
       {
-        path: "validators",
-        component: BBValidatorsExampleComponent,
+        path: "directives",
+        component: BBDirectivesExampleComponent,
         data: {
           breadcrumb: "Validators",
         }

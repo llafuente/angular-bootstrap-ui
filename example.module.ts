@@ -20,8 +20,8 @@ export { BBBreadcrumbExampleComponent } from "./example/BBBreadcrumbExample.comp
 import { BBLoadingPageExampleComponent } from "./example/BBLoadingPageExample.component";
 export { BBLoadingPageExampleComponent } from "./example/BBLoadingPageExample.component";
 
-import { BBValidatorsExampleComponent } from "./example/BBValidatorsExample.component";
-export { BBValidatorsExampleComponent } from "./example/BBValidatorsExample.component";
+import { BBDirectivesExampleComponent } from "./example/BBDirectivesExample.component";
+export { BBDirectivesExampleComponent } from "./example/BBDirectivesExample.component";
 
 import { BBButtonExampleComponent } from "./example/BBButtonExample.component";
 export { BBButtonExampleComponent } from "./example/BBButtonExample.component";
@@ -85,7 +85,7 @@ export const declarations = [
   BBBadgesExampleComponent,
   BBBreadcrumbExampleComponent,
   BBLoadingPageExampleComponent,
-  BBValidatorsExampleComponent,
+  BBDirectivesExampleComponent,
   BBButtonExampleComponent,
   BBCheckboxesExampleComponent,
   BBRadiosExampleComponent,
