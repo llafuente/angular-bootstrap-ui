@@ -12,6 +12,20 @@
 <bb-errors model="#numberNoComma" pattern="Cannot contain comma"></bb-errors>
 
 
+<h2>Input number only integer</h2>
+
+<alert type="info">
+  Note: this only check the key input to not be float (forbid comma, dot and e letter)<br />
+  Note: model could be a float if you enter very big numbers...
+</alert>
+
+<pre>model: {{models.integer | json}}</pre>
+
+<bb-input-container label="Input">
+  <input bb-child [(ngModel)]="models.integer" integer type="number" />
+</bb-input-container>
+
+
 <h2>Forbid input empty string value, force null</h2>
 
 <pre>model: {{models.string_empty_null | json}}</pre>

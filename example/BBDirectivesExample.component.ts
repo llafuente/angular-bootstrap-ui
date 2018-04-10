@@ -10,5 +10,6 @@ export class BBDirectivesExampleComponent {
   models = {
     number_no_comma: null,
     string_empty_null: null,
+    integer: 100
   };
 }

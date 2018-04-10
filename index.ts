@@ -55,6 +55,8 @@ import { NoCommaDirective } from "./src/directives/NoComma.directive";
 export { NoCommaDirective } from "./src/directives/NoComma.directive";
 import { EmptyIsNullDirective } from "./src/directives/EmptyIsNull.directive";
 export { EmptyIsNullDirective } from "./src/directives/EmptyIsNull.directive";
+import { IntegerDirective } from "./src/directives/Integer.directive";
+export { IntegerDirective } from "./src/directives/Integer.directive";
 
 import { BBTableComponent } from "./src/components/BBTable.component";
 export { BBTableComponent } from "./src/components/BBTable.component";
@@ -177,6 +179,7 @@ export const declarations = [
 
   NoCommaDirective,
   EmptyIsNullDirective,
+  IntegerDirective,
 
   BBCheckComponent,
   BBCheckComponent,

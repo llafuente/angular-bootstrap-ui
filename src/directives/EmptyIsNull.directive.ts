@@ -3,7 +3,7 @@ import { Directive, OnDestroy } from "@angular/core";
 import { Subscription } from "rxjs/Rx";
 
 @Directive({
-  selector: 'select[empty-is-null], input[empty-is-null], textarea[empty-is-null]'
+  selector: '[empty-is-null][ngModel]'
 })
 export class EmptyIsNullDirective implements OnDestroy {
   subs: Subscription = null;
