@@ -14,6 +14,9 @@ Built on top of ngx-bootstrap.
   * empty-is-null
   * integer
   * no-comma
+* [Pipes](src/pipes/README.md)
+
+
 
 # Usage
 
