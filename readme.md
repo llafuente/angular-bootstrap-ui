@@ -10,6 +10,10 @@ Built on top of ngx-bootstrap.
 
 * [bb-alert-service &amp; BBAlertService](src/services/alert/README.md)
 * [bb-confirm-service &amp; BBConfirmService](src/services/alert/README.md)
+* [Directives](src/directives/README.md)
+  * empty-is-null
+  * integer
+  * no-comma
 
 # Usage
 
