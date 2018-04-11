@@ -18,6 +18,8 @@ Returns the Error when the subject is resolved with an error, false otherwise.
 
 Use it to display errors.
 
+### [source](getError.pipe.ts)
+
 ### Example
 
 ```html
@@ -31,6 +33,8 @@ Use it to display errors.
 Returns true when the subject is resolved with an error, false otherwise.
 
 Use it to display your content or error.
+
+### [source](isError.pipe.ts)
 
 ### Example
 
@@ -52,6 +56,8 @@ Returns true while the subject is not resolved, false otherwise
 
 Use it to dislay a spinner.
 
+### [source](isLoading.pipe.ts)
+
 ### Example
 
 ```html
@@ -72,6 +78,8 @@ Use it to dislay a spinner.
 Returns true when the subject is resolved successfully, false otherwise.
 
 Use it to display your content or error.
+
+### [source](isSuccess.pipe.ts)
 
 ### Example
 

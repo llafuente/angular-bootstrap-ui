@@ -11,11 +11,14 @@ Built on top of ngx-bootstrap.
 * [bb-alert-service &amp; BBAlertService](src/services/alert/README.md)
 * [bb-confirm-service &amp; BBConfirmService](src/services/alert/README.md)
 * [Directives](src/directives/README.md)
-  * empty-is-null
-  * integer
-  * no-comma
+  * [empty-is-null](src/directives/README.md#empty-is-null)
+  * [integer](src/directives/README.md#integer)
+  * [no-comma](src/directives/README.md#no-comma)
 * [Pipes](src/pipes/README.md)
-
+  * [getError](src/pipes/README.md#geterror)
+  * [isError](src/pipes/README.md#iserror)
+  * [isLoading](src/pipes/README.md#isloading)
+  * [isSuccess](src/pipes/README.md#issuccess)
 
 
 # Usage
