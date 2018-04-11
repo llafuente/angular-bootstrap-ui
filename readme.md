@@ -19,6 +19,8 @@ Built on top of ngx-bootstrap.
   * [isError](src/pipes/README.md#iserror)
   * [isLoading](src/pipes/README.md#isloading)
   * [isSuccess](src/pipes/README.md#issuccess)
+* [Utils](src/utils/README.md)
+  * [aggregateSubjects](src/utils/README.md#aggregatesubjects)
 
 
 # Usage
