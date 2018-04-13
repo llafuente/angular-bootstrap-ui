@@ -24,7 +24,7 @@ import { Subscription } from "rxjs/Rx";
     <div class="d-flex">
       <bb-button
         class="ml-auto"
-        (click)="hide()">{{(accept || 'confirm.accept') | translate}}</bb-button>
+        (click)="hide()">{{'alert.ok' | translate}}</bb-button>
     </div>
   </bb-section-footer>
 </bb-modal>
@@ -35,6 +35,7 @@ export class BBAlertServiceComponent implements OnDestroy, OnInit {
   header: string = null;
   text: string = null;
   isHTML: boolean = false;
+  size = "md";
 
   @ViewChild("bbModal") bbModal: BBModalComponent;
 
@@ -64,20 +65,21 @@ export class BBAlertServiceComponent implements OnDestroy, OnInit {
   }
 
 
-  show(header: string, text: string, isHTML: boolean): Subject<null> {
+  show(header: string, text: string, isHTML: boolean, size: string = "md"): Subject<null> {
     console.log(header,text, isHTML);
     this.bbModal.show();
 
     this.header = header;
     this.text = text;
     this.isHTML = isHTML;
+    this.size = size;
 
     this.lastSubject = new Subject<null>();
 
     return this.lastSubject;
   }
 
-  hide(result: boolean): void {
+  hide(): void {
     this.notifyCloseOnce();
 
     this.bbModal.hide();

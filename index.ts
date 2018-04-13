@@ -247,13 +247,49 @@ export class BootstrapUIModule {
     translate: TranslateService,
   ) {
     translate.setTranslation('en', {
+      "content": {
+        "retry": "Try again",
+        "error": "There was an error obtaining information",
+      },
       "breadcrumb": {
         "home": "Home"
       },
+      "datepicker": {
+        "clear": "Clear",
+        "close": "Close"
+      },
+      "modal": {
+        "close": "Close"
+      },
+      "alert": {
+        "ok": "OK",
+      },
+      "confirm": {
+        "cancel": "Cancel",
+        "accept": "Accept"
+      },
     });
     translate.setTranslation('es', {
+      "content": {
+        "retry": "Volver a intentarlo",
+        "error": "Error al obtener la informacion solicitada.",
+      },
       "breadcrumb": {
         "home": "Inicio"
+      },
+      "datepicker": {
+        "clear": "Vaciar",
+        "close": "Cerrar"
+      },
+      "modal": {
+        "close": "Cerrar"
+      },
+      "alert": {
+        "ok": "OK",
+      },
+      "confirm": {
+        "cancel": "Cancelar",
+        "accept": "Aceptar"
       },
     });
   }

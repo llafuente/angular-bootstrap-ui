@@ -19,7 +19,7 @@ export class BBAlertService {
     return this.component.show(header, text, isHTML);
   }
 
-  hide(result: boolean): void {
-    this.component.hide(result);
+  hide(): void {
+    this.component.hide();
   }
 }
