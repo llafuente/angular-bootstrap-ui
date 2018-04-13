@@ -1,5 +1,9 @@
 import { Component, HostBinding, Input } from "@angular/core";
 
+
+/**
+ * Animated progress bar
+ */
 @Component({
   selector: "bb-progress",
   template: `

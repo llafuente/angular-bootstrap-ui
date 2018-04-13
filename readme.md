@@ -64,8 +64,7 @@ This module require you to insert in your HTML:
 
 ngx-bootstrap need to be configured in boostrap 4 mode:
 
-your index.html
-```
+```html
 <html>
   <head>
     <script>window.__theme = 'bs4';</script>

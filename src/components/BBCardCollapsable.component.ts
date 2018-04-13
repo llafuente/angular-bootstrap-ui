@@ -9,6 +9,10 @@ import {
 
 // NOTE all whitespace removal (no identation) it's on purpose
 // to support css :empty
+
+/**
+ * Create a card that can be collapsed (only displaying the header)
+ */
 @Component({
   selector: "bb-card-collapsable",
   template: `

@@ -1,10 +1,12 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { Subject } from "rxjs/Subject";
 
-// <pre>
-// isLoading? {{subject | isLoading | json}}
-// isError? {{subject | isError | json}}
-// </pre>
+/**
+ * Component to identify a content unlike footer/header it does many things :)
+ * * display a loading while subject isLoading
+ * * display content if subject isSuccess
+ * * display an error if subject isError, with a retry button
+ */
 @Component({
   selector: "bb-section-content",
   template: `
@@ -28,14 +30,14 @@ import { Subject } from "rxjs/Subject";
 
       <div *ngSwitchCase="true" class="container text-center">
         <alert type="danger" class="mt-2">
-          {{errorMessage || 'Error al obtener la informacion solicitada.'}}
+          {{errorMessage || ("content.error" | translate)}}
         </alert>
 
         <button
           class="btn"
           type="button"
           (click)="doReload()">
-          <i class="fa fa-refresh"></i> Volver a intentarlo
+          <i class="fa fa-refresh"></i> {{"content.retry" | translate}}
         </button>
       </div>
     </div>
@@ -44,6 +46,7 @@ import { Subject } from "rxjs/Subject";
   `,
 })
 export class BBSectionContentComponent {
+  /** Call it when an error ocurr */
   @Output() onReload: EventEmitter<any> = new EventEmitter<any>();
   @Input() subject: Subject<any> = null;
   @Input() loadingMessage: string;

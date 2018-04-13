@@ -1,5 +1,8 @@
 import { Component, HostBinding, Input } from "@angular/core";
 
+/**
+ * Create a button
+ */
 @Component({
   selector: "bb-button",
   template: `

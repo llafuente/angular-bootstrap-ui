@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 /**
- * Create a section
+ * Create a page section
  *
  * Valid children
  * * bb-section-header
@@ -9,6 +9,19 @@ import { Component } from "@angular/core";
  */
 @Component({
   selector: "bb-section",
-  templateUrl: "./BBSection.component.html",
+  template: `
+<section class="container">
+  <h1>
+    <ng-content select="bb-section-header">
+    </ng-content>
+  </h1>
+
+  <ng-content select="bb-section-content">
+  </ng-content>
+
+  <ng-content select="bb-section-footer">
+  </ng-content>
+</section>
+`,
 })
 export class BBSectionComponent {}

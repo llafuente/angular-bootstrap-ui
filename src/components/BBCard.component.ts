@@ -2,6 +2,10 @@ import { Component, HostBinding, Input } from "@angular/core";
 
 // NOTE all whitespace removal (no identation) it's on purpose
 // to support css :empty
+
+/**
+ * Create a Card
+ */
 @Component({
   selector: "bb-card",
   template: `
@@ -19,6 +23,7 @@ import { Component, HostBinding, Input } from "@angular/core";
   `,
 })
 export class BBCardComponent {
+  /** header text */
   @Input() header: string;
   @HostBinding("style.flex") private x = 1; // tslint:disable-line:no-unused-variable
 }

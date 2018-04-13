@@ -1,5 +1,9 @@
 import { Component, HostBinding, Input } from "@angular/core";
 
+/**
+ * Create a full screen loading and set a spinner in the middle while loading=true
+ * loading=false hides everything
+ */
 @Component({
   selector: "bb-loading-page",
   template: `
@@ -22,6 +26,7 @@ import { Component, HostBinding, Input } from "@angular/core";
   `,
 })
 export class BBLoadingPageComponent {
+  /** display loading? */
   @HostBinding("class.loading")
   @Input()
   loading = false;
