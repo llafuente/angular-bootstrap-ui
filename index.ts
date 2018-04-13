@@ -10,8 +10,8 @@ import { DatepickerModule } from "ngx-bootstrap/datepicker";
 import { ModalModule } from "ngx-bootstrap/modal";
 import { TypeaheadModule } from "ngx-bootstrap/typeahead";
 
-import { TranslateModule, TranslateService } from 'ng2-translate';
-export * from "ng2-translate";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+export * from "@ngx-translate/core";
 import { ToastyModule } from "ng2-toasty";
 export * from "ng2-toasty";
 
@@ -157,7 +157,7 @@ export const imports = [
   ToastyModule.forRoot(),
 ];
 
-export const declarations = [
+export const components = [
   BBProgressComponent,
 
   BBEllipsisComponent,
@@ -207,25 +207,36 @@ export const declarations = [
 
   BBTableComponent,
 
+];
+
+export const pipes = [
   GetErrorPipe,
   IsErrorPipe,
   IsLoadingPipe,
   IsSuccessPipe,
-
+];
+export const services = [
+  BBErrorMessages,
+  BBConfirmService,
+  BBAlertService,
 ];
 
 @NgModule({
-  declarations,
+  declarations: [
+    ...components,
+    ...pipes,
+  ],
   imports,
   providers: [
-    BBErrorMessages,
-    BBConfirmService,
-    BBAlertService,
+    ...services,
+
   ],
   exports: [
     BrowserModule,
 
-    ...declarations,
+    ...components,
+    ...pipes,
+
     TranslateModule,
 
     TooltipModule,

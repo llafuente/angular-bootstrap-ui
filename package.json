@@ -15,12 +15,12 @@
     "font-awesome": "4.7.0",
     "ng2-toasty": "4.0.3",
     "ngx-bootstrap": "2.0.3",
-    "@angular/core": ">=5.0.0"
+    "@angular/core": ">=5.0.0",
+    "@ngx-translate/core": "8.0.0"
   },
   "license": "MIT",
   "dependencies": {
-    "ftellipsis": "0.2.3",
-    "ng2-translate": "5.0.0"
+    "ftellipsis": "0.2.3"
   },
   "devDependencies": {
     "angular-common-module": "0.0.*",

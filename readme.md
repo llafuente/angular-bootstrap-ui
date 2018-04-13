@@ -48,9 +48,7 @@ $fa-font-path: "~font-awesome/fonts";
 ```
 
 
-## External deps install
-
-Follow their instructions:
+## Dependencies notes
 
 ### [ng2-toasty](https://github.com/akserg/ng2-toasty)
 
@@ -74,3 +72,9 @@ ngx-bootstrap need to be configured in boostrap 4 mode:
 To configure datepicker locale read [datepicker/locales](https://valor-software.com/ngx-bootstrap/#/datepicker#locales)
 
 
+### @ngx-translate/core
+
+Version 8.0.0 is used to keep rxjs in version 5.
+
+When Angular 6 is a bit mature @ngx-translate will be bumped and no more support
+for Angular 5.
