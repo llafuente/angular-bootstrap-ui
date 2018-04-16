@@ -7,16 +7,24 @@
 $form-control-bordered: $gray-200 !default;
 $form-control-bordered-hover: $gray-400 !default;
 
-$input-color: $gray-600;
 $input-border-radius: 1px;
 $input-btn-border-width: 0;
 $input-disabled-bg: transparent;
 $input-bg: transparent;
 $input-group-addon-bg: transparent;
+
 $input-padding-x: 1rem; // CHANGE from 20px
-$input-btn-padding-x: 1rem; // changed in bootstrap-beta
 $input-padding-y: 0.5rem; // CHANGE from 10px
+
+$input-btn-padding-x: 1rem; // changed in bootstrap-beta
 $input-btn-padding-y: 0.5rem; // changed in bootstrap-beta
+
+$input-color: $gray-600  !default;
+$input-color-disabled: $gray-400 !default;
+
+$input-label-color: $gray-400 !default;
+$input-label-color-focused: $gray-500 !default;
+$input-label-color-disabled: $gray-300 !default;
 
 $control-min-height: 40px;
 
@@ -41,7 +49,7 @@ $control-min-height: 40px;
       top: $input-padding-y + 1rem;
       left: 1rem;
       transition: 0.3s all ease-out;
-      color: $gray-400;
+      color: $input-label-color;
       z-index: 4; // put the label above input background
     }
     /*
@@ -67,7 +75,7 @@ $control-min-height: 40px;
       top: 0rem;
       left: 0;
       font-size: 0.75rem;
-      color: $gray-500;
+      color: $input-label-color-focused;
     }
   }
   select {
@@ -173,10 +181,10 @@ $input-border-width: 0;
 
 .form-control-disabled {
   label {
-    color: $gray-300 !important;
+    color: $input-label-color-disabled !important;
   }
   input {
-    color: $gray-400;
+    color: $input-color-disabled;
   }
 }
 
