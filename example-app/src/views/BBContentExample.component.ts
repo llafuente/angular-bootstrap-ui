@@ -16,7 +16,7 @@ declare const jQuery;
 <h3>4 lines</h3>
 <bb-ellipsis height="96">jsahd kjajsd hkashd akjhd aksjd haksj dhaksjd haskjd haskdj haskjdaksdjhas kjhdaskjhdaks duhasiduh akduash kdjash dkashkjas hkauhsd kausdh kasuhdoas dakjshd aksud haksd haskdj haskd uhaskduhsaikduhaksdu hakdsuh aksudha kkaushd aowdijh askjdahiuhdwkjahsd aijwnakcja haiushd ahduask asdka uhdkaushd asud halksidjh askudh akshd aushdika hfuakshfkasdh ausdhsadjhasdihasodi ashudash daishdkasdj nhakauhsd aksiudha sdjsahd kjajsd hkashd akjhd aksjd haksj dhaksjd haskjd haskdj haskjdaksdjhas kjhdaskjhdaks duhasiduh akduash kdjash dkashkjas hkauhsd kausdh kasuhdoas dakjshd aksud haksd haskdj haskd uhaskduhsaikduhaksdu hakdsuh aksudha kkaushd aowdijh askjdahiuhdwkjahsd aijwnakcja haiushd ahduask asdka uhdkaushd asud halksidjh askudh akshd aushdika hfuakshfkasdh ausdhsadjhasdihasodi ashudash daishdkasdj nhakauhsd aksiudha sdjsahd kjajsd hkashd akjhd aksjd haksj dhaksjd haskjd haskdj haskjdaksdjhas kjhdaskjhdaks duhasiduh akduash kdjash dkashkjas hkauhsd kausdh kasuhdoas dakjshd aksud haksd haskdj haskd uhaskduhsaikduhaksdu hakdsuh aksudha kkaushd aowdijh askjdahiuhdwkjahsd aijwnakcja haiushd ahduask asdka uhdkaushd asud halksidjh askudh akshd aushdika hfuakshfkasdh ausdhsadjhasdihasodi ashudash daishdkasdj nhakauhsd aksiudha sd</bb-ellipsis>
 
-<h1>Hidden elippsis</h1>
+<h1>Hidden ellipsis</h1>
 <bb-card-collapsable [startCollapsed]="true">
   <bb-section-content>
     <hr />
