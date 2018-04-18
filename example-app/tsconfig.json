@@ -15,5 +15,11 @@
       "es2017",
       "dom"
     ]
-  }
+  },
+  "include": [
+    "src/main.ts",
+    "src/polyfills.ts",
+    "src/angular-bootstrap-ui/index.ts",
+    "node_modules/angular-common-module"
+  ]
 }

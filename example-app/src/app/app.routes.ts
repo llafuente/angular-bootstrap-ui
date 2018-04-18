@@ -5,7 +5,7 @@ import {
   Routes,
   ActivatedRouteSnapshot,
 } from "@angular/router";
-import { RoutesWithBreadcrumbs } from "./src/components/BBBreadcrumb.component";
+import { RoutesWithBreadcrumbs } from "../angular-bootstrap-ui";
 import {
   BBContentExampleComponent,
   BBBreadcrumbExampleComponent,
@@ -25,9 +25,9 @@ import {
   BBTabsExampleComponent,
   BBListsExampleComponent,
   BBStringListExampleComponent
-} from "./example.module";
+} from "./app.module";
 import { RootComponent } from "angular-common-module";
-import { Resolve5s } from "./example/Resolve5s";
+import { Resolve5s } from "./Resolve5s";
 
 const routes: RoutesWithBreadcrumbs = [
   {

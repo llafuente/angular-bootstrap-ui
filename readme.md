@@ -35,6 +35,20 @@ This is the recommended installation.
 npm i --save "angular-bootstrap-ui" "bootstrap@4.0.0" "font-awesome@4.7.0"  "ngx-bootstrap@2.0.3" "ng2-toasty@4.0.3" "@ngx-translate/core@8.0.0"
 ```
 
+# Language selection
+
+@app.module.ts
+
+```ts
+import { TranslateService } from '../angular-bootstrap-ui';
+
+export class AppModule {
+  constructor(translateService: TranslateService) {
+    translateService.setDefaultLang('es');
+  }
+}
+```
+
 # SCSS import
 
 ```
@@ -80,3 +94,18 @@ Version 8.0.0 is used to keep rxjs in version 5.
 
 When Angular 6 is a bit mature @ngx-translate will be bumped and no more support
 for Angular 5.
+
+### running example app
+
+Example app require to setup a symlink;
+
+```
+cd example-app\src
+
+# for windows
+# NOTE: this require administrator priviledges
+mklink /D angular-bootstrap-ui ../../
+
+# for linux
+# ln -sf angular-bootstrap-ui ../../
+```
