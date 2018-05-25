@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/llafuente/angular-bootstrap-ui/compare/v1.2.1...v1.3.0) (2018-05-25)
+
+
+### Bug Fixes
+
+* replace ng2-translate to [@ngx-translate](https://github.com/ngx-translate)/core ([fb0e9cb](https://github.com/llafuente/angular-bootstrap-ui/commit/fb0e9cb))
+
+
+### Features
+
+* allow override each error message at component level ([06bc46a](https://github.com/llafuente/angular-bootstrap-ui/commit/06bc46a))
+* vartiables for font-colors inputs states ([e22c13c](https://github.com/llafuente/angular-bootstrap-ui/commit/e22c13c))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/llafuente/angular-bootstrap-ui/compare/v1.2.0...v1.2.1) (2018-04-13)
 
