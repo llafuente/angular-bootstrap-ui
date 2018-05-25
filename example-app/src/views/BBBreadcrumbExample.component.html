@@ -1,3 +1,7 @@
+<h1><a href="https://github.com/llafuente/angular-bootstrap-ui/blob/master/src/components/breadcrumb/README.md" target="_blank">bb-breadcrumb</a></h1>
+
+<h3>Navigation example</h3>
+
 <div>
   <button class="btn" [routerLink]="['/breadcrumb']">breadcrumb root</button>
 
@@ -18,47 +22,17 @@
 
 <hr />
 
+
+<h3>bb-breadcrumb</h3>
 <bb-breadcrumb></bb-breadcrumb>
+
+
+<h3>bb-breadcrumb ignoredLevels=1</h3>
+<bb-breadcrumb [ignoredLevels]="1"></bb-breadcrumb>
+
+<h3>bb-breadcrumb ignoredLevels=2</h3>
+<bb-breadcrumb [ignoredLevels]="2"></bb-breadcrumb>
 
 <hr />
 
 <router-outlet></router-outlet>
-
-<h3>Documentation</h3>
-
-<h4>Route metadata</h4>
-
-<p>Route.<strong>data.breadcrumb</strong>: string</p>
-
-<p>This is the breadcrumb label to be displayed</p>
-
-<p>Route.<strong>data.breadcrumbLink</strong>: boolean</p>
-
-<p>This breadcrumb is a Link or plain text?
-Optional, default: true</p>
-
-<!-- this is really stupid Angular issue! https://github.com/angular/angular/issues/11859 -->
-<pre>
-{{'{
-  path: "breadcrumb",
-  component: BB4UI.BreadcrumbExampleComponent,
-  data: {
-    breadcrumb: "Breadcrumb",
-  },
-}'}}
-</pre>
-
-<h4>Component</h4>
-
-<pre>
-  &lt;bb-breadcrumb [ignoredLevels]="number">&lt;/bb-breadcrumb>
-</pre>
-
-<p><strong>ignoredLevels (Optional, default: 0)</strong>: Ignore the first X levels.<br />
-Use [ignoredLevels]="1" to hide Home link.</p>
-
-<h4>i18n</h4>
-
-Every label pass through the translate pipe.
-
-<strong>breadcumb.home</strong>: label for the home link.

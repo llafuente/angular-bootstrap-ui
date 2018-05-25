@@ -1,5 +1,5 @@
 import { Component, ViewChild } from "@angular/core";
-import { BBConfirmComponent, BBConfirmService, BBAlertService } from "../angular-bootstrap-ui";
+import { BBConfirmComponent, BBConfirmService, BBAlertService } from "angular-bootstrap-ui";
 
 @Component({
   selector: "bb-card-example-component",

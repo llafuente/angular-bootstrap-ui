@@ -99,10 +99,10 @@ for Angular 5.
 
 ### running example app
 
-Example app require to setup a symlink;
+Example app require to setup a symlink, `npm link` could be an alternative
 
 ```
-cd example-app\src
+cd example-app\node_modules
 
 # for windows
 # NOTE: this require administrator priviledges
@@ -111,3 +111,9 @@ mklink /D angular-bootstrap-ui ../../
 # for linux
 # ln -sf angular-bootstrap-ui ../../
 ```
+
+### publish gh-pages
+
+cd example-app
+git co gh-pages
+git add fontawesome* index.html inline.bundle.js inline.bundle.js.map main.bundle.js main.bundle.js.map polyfills.bundle.js polyfills.bundle.js.map styles.bundle.js styles.bundle.js.map vendor.bundle.js vendor.bundle.js.map favicon.ico

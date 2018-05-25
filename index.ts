@@ -39,8 +39,8 @@ export { BBCardComponent } from "./src/components/BBCard.component";
 import { BBCardCollapsableComponent } from "./src/components/BBCardCollapsable.component";
 export { BBCardCollapsableComponent } from "./src/components/BBCardCollapsable.component";
 
-import { BreadcrumbComponent } from "./src/components/BBBreadcrumb.component";
-export { BreadcrumbCallback, BreadcrumbComponent, getFromResolve, IBreadcrumb, RoutesWithBreadcrumbs, RouteWithBreadcrumbs } from "./src/components/BBBreadcrumb.component";
+import { BreadcrumbComponent } from "./src/components/breadcrumb/BBBreadcrumb.component";
+export { BreadcrumbCallback, BreadcrumbComponent, getFromResolve, IBreadcrumb, RoutesWithBreadcrumbs, RouteWithBreadcrumbs } from "./src/components/breadcrumb/BBBreadcrumb.component";
 
 
 import { BBLoadingPageComponent } from "./src/components/BBLoadingPage.component";

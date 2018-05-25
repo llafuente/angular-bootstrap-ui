@@ -9,7 +9,7 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { FormsModule, NgModel } from "@angular/forms";
 
-import { BootstrapUIModule } from '../angular-bootstrap-ui/index';
+import { BootstrapUIModule } from 'angular-bootstrap-ui/index';
 
 import { BBContentExampleComponent } from '../views/BBContentExample.component';
 export { BBContentExampleComponent } from '../views/BBContentExample.component';
@@ -70,7 +70,7 @@ export { BBStringListExampleComponent } from "../views/BBStringListExample.compo
 
 import { BootstrapUIExampleRouteModule } from './app.routes';
 import { AngularCommonModule } from 'angular-common-module';
-import { TranslateService } from '../angular-bootstrap-ui';
+import { TranslateService } from 'angular-bootstrap-ui';
 
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';

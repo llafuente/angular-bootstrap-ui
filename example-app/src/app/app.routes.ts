@@ -5,7 +5,7 @@ import {
   Routes,
   ActivatedRouteSnapshot,
 } from "@angular/router";
-import { RoutesWithBreadcrumbs } from "../angular-bootstrap-ui";
+import { RoutesWithBreadcrumbs } from "angular-bootstrap-ui";
 import {
   BBContentExampleComponent,
   BBBreadcrumbExampleComponent,
