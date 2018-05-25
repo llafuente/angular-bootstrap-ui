@@ -14,13 +14,13 @@ import { BBErrorMessages } from "./BBErrorMessages.service";
   selector: "bb-errors",
   template: `
 <div class="alert alert-danger" *ngIf="!model.valid && model?.errors && (model.dirty || model.touched)">
-  <div *ngIf="model.errors?.required" class="form-control-feedback">{{messages.required}}</div>
-  <div *ngIf="model.errors?.minlength" class="form-control-feedback">{{messages.minlength}}</div>
-  <div *ngIf="model.errors?.maxlength" class="form-control-feedback">{{messages.maxlength}}</div>
-  <div *ngIf="model.errors?.email" class="form-control-feedback">{{messages.email}}</div>
-  <div *ngIf="model.errors?.url" class="form-control-feedback">{{messages.url}}</div>
+  <div *ngIf="model.errors?.required" class="form-control-feedback">{{required || messages.required}}</div>
+  <div *ngIf="model.errors?.minlength" class="form-control-feedback">{{minlength || messages.minlength}}</div>
+  <div *ngIf="model.errors?.maxlength" class="form-control-feedback">{{maxlength || messages.maxlength}}</div>
+  <div *ngIf="model.errors?.email" class="form-control-feedback">{{email || messages.email}}</div>
+  <div *ngIf="model.errors?.url" class="form-control-feedback">{{url || messages.url}}</div>
   <div *ngIf="model.errors?.pattern" class="form-control-feedback">{{pattern || messages.pattern}}</div>
-  <div *ngIf="model.errors?.number" class="form-control-feedback">{{messages.number || messages.pattern}}</div>
+  <div *ngIf="model.errors?.number" class="form-control-feedback">{{number || messages.number || messages.pattern}}</div>
 </div>
   `,
 })
@@ -29,6 +29,18 @@ export class BBErrorsComponent {
   @Input() model: NgModel;
   /** override pattern message */
   @Input() pattern: string;
+  /** override maxlength message */
+  @Input() maxlength: string;
+  /** override minlength message */
+  @Input() minlength: string;
+  /** override required message */
+  @Input() required: string;
+  /** override email message */
+  @Input() email: string;
+  /** override url message */
+  @Input() url: string;
+  /** override number message */
+  @Input() number: string;
 
   constructor(public messages: BBErrorMessages) {}
 }
