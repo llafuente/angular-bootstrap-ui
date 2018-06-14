@@ -1,0 +1,10 @@
+<div class="card d-flex flex-column" style="flex: 1">
+  <div class="card-header">
+    <h2 *ngIf="header">{{header}}</h2>
+    <ng-content *ngIf="!header" select="bb-section-header"></ng-content>
+  </div>
+
+  <div class="card-body"><ng-content select="bb-section-content"></ng-content></div>
+
+  <div class="card-footer mt-auto"><ng-content select="bb-section-footer"></ng-content></div>
+</div>

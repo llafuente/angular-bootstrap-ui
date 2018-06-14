@@ -1,0 +1,69 @@
+<!--
+  <div
+  class="form-group">
+  <label>Datepicker</label>
+
+  <div class="form-control-container input-group">
+-->
+
+<ng-template #tolTemplate>
+  <datepicker
+    [(ngModel)]="dtModelValue"
+    (ngModelChange)="writeValue(dtModelValue)"></datepicker>
+  <div class="d-flex">
+    <bb-button class="ml-auto" (click)="hideDatepicker()">{{ 'datepicker.close' | translate}}</bb-button>
+    <!--
+    <bb-button
+      class="ml-auto"
+      (click)="clearDatepicker()">{{ 'datepicker.clear' | translate}}</bb-button>
+    -->
+  </div>
+</ng-template>
+
+<bb-input-container
+  [class]="containerClass"
+  [addon]="true"
+  [label]="label"
+  [help]="help"
+  [size]="size">
+  <input
+    id="{{name}}-id" class="form-control"
+    type="text"
+    [name]="name"
+    [value]="modelValue ? (modelValue | date: format) : ''"
+    [required]="required"
+    [disabled]="disabled"
+    (click)="showDatepicker()"
+    #input=""
+    bb-child="" />
+  <div class="input-group-addon">
+    <a
+      [class.disabled]="disabled"
+      (click)="showDatepicker()">
+      <i
+        class="fa fa-calendar"
+        aria-hidden="true"></i>
+    </a>
+
+    <a
+      [class.disabled]="disabled"
+      (click)="clearDatepicker()">
+      <i class="fa fa-times-circle"></i>
+
+    </a>
+
+    <div
+      tooltipClass="datepicker-tooltip"
+      #dpTooltip="bs-tooltip"
+      triggers="focus"
+      placement="left"
+      [tooltip]="tolTemplate"></div>
+  </div>
+</bb-input-container>
+
+<!--
+  </div>
+  <small *ngIf="help" id="{{name}}-help" class="form-text text-muted">{{help}}</small>
+
+  </div>
+-->

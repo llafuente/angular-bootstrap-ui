@@ -1,4 +1,4 @@
-# Angular bootstrap UI
+# angular-bootstrap-ui
 
 Complete UI toolkit using bootstrap 4 for Angular 5+.
 
@@ -10,110 +10,132 @@ Built on top of ngx-bootstrap.
 
 # Documentation
 
-* [bb-alert-service &amp; BBAlertService](src/services/alert/README.md)
-* [bb-confirm-service &amp; BBConfirmService](src/services/alert/README.md)
-* [Directives](src/directives/README.md)
-  * [empty-is-null](src/directives/README.md#empty-is-null)
-  * [integer](src/directives/README.md#integer)
-  * [no-comma](src/directives/README.md#no-comma)
-* [Pipes](src/pipes/README.md)
-  * [getError](src/pipes/README.md#geterror)
-  * [isError](src/pipes/README.md#iserror)
-  * [isLoading](src/pipes/README.md#isloading)
-  * [isSuccess](src/pipes/README.md#issuccess)
-* [Utils](src/utils/README.md)
-  * [aggregateSubjects](src/utils/README.md#aggregatesubjects)
+* [directives](directives.md)
+  * [bb-child](directives.md#bb-child)
+  * [bb-autosize](directives.md#bb-autosize)
+  * [empty-is-null](directives.md#empty-is-null)
+  * [integer](directives.md#integer)
+  * [no-comma](directives.md#no-comma)
+* [pipes](pipes.md)
+  * [getError](pipes.md#geterror)
+  * [isError](pipes.md#iserror)
+  * [isLoading](pipes.md#isloading)
+  * [isSuccess](pipes.md#issuccess)
+* [components](components.md)
+* [utils](utils.md)
+  * [aggregateSubjects](utils.md#aggregatesubjects)
+* services
+  * [bb-alert-service &amp; BBAlertService](alert-service.md)
+  * [bb-confirm-service &amp; BBConfirmService](confirm-service.md)
 
 
-# Usage
+# Development server
 
-## Install
+Run `npm run full-start` for a dev server. Navigate to `http://localhost:4200/`.
 
-`angular-bootstrap-ui` use peerDependencies to handle most it's dependencies.
+It will run the example app with all examples.
 
-This is the recommended installation.
+If you need to modify angular-bootstrap-ui, you need to restart the process,
+changes in the library are not detected by angular cli :S
 
-```
-npm i --save "angular-bootstrap-ui" "bootstrap@4.0.0" "font-awesome@4.7.0"  "ngx-bootstrap@2.0.3" "ng2-toasty@4.0.3" "@ngx-translate/core@8.0.0"
-```
+# Dependencies notes
 
-# Language selection
+## [ngx-toastr](https://github.com/scttcper/ngx-toastr)
 
-@app.module.ts
-
-```ts
-import { TranslateService } from '../angular-bootstrap-ui';
-
-export class AppModule {
-  constructor(translateService: TranslateService) {
-    translateService.setDefaultLang('es');
-  }
-}
-```
-
-# SCSS import
-
-```
-$fa-font-path: "~font-awesome/fonts";
-@import '~font-awesome/scss/font-awesome.scss';
-
-@import '~bootstrap/scss/_mixins.scss';
-@import '~bootstrap/scss/_functions.scss';
-@import '~bootstrap/scss/_variables.scss';
-
-@import '~angular-bootstrap-ui/scss/index';
-@import '~bootstrap/scss/bootstrap.scss';
-```
-
-
-## Dependencies notes
-
-### [ng2-toasty](https://github.com/akserg/ng2-toasty)
+We add just design.
 
 This module require you to insert in your HTML:
 
 ```html
-<ng2-toasty position="bottom-center"></ng2-toasty>
+<ngx-toastr></ngx-toastr>
 ```
 
 ### [ngx-bootstrap](https://valor-software.com/ngx-bootstrap)
 
-ngx-bootstrap need to be configured in boostrap 4 mode:
-
-```html
-<html>
-  <head>
-    <script>window.__theme = 'bs4';</script>
-  <!-- ... -->
-```
+We configure ngx-bootstrap as bootstrap 4 mode.
 
 To configure datepicker locale read [datepicker/locales](https://valor-software.com/ngx-bootstrap/#/datepicker#locales)
 
 
-### @ngx-translate/core
+## Migration process
 
-Version 8.0.0 is used to keep rxjs in version 5.
+This is just for reference purposes.
 
-When Angular 6 is a bit mature @ngx-translate will be bumped and no more support
-for Angular 5.
+Migration process from angular 5 -> 6.
 
-### running example app
 
-Example app require to setup a symlink, `npm link` could be an alternative
 
+```bash
+ng generate component --project angular-bootstrap-ui BBButton
+ng generate component --project angular-bootstrap-ui BBCard
+ng generate component --project angular-bootstrap-ui BBCardCollapsable
+ng generate component --project angular-bootstrap-ui BBRouterChangeLoading
+ng generate component --project angular-bootstrap-ui BBSection
+ng generate component --project angular-bootstrap-ui BBSectionCollapsable
+ng generate component --project angular-bootstrap-ui BBSectionContent
+ng generate component --project angular-bootstrap-ui BBSectionFooter
+ng generate component --project angular-bootstrap-ui BBSectionHeader
+ng generate component --project angular-bootstrap-ui BBTable
+ng generate component --project angular-bootstrap-ui BBProgress
+ng generate component --project angular-bootstrap-ui BBLoadingPage
+
+ng generate component --project angular-bootstrap-ui BBBreadcrumb
+
+ng generate component --project angular-bootstrap-ui BBCheck
+ng generate directive --project angular-bootstrap-ui BBChild
+ng generate component --project angular-bootstrap-ui BBDatepicker
+ng generate component --project angular-bootstrap-ui BBErrors
+ng generate component --project angular-bootstrap-ui BBInputContainer
+ng generate component --project angular-bootstrap-ui BBRadio
+ng generate component --project angular-bootstrap-ui BBStatic
+ng generate component --project angular-bootstrap-ui BBSwitch
+ng generate directive --project angular-bootstrap-ui BBTextareaAutosize
+ng generate component --project angular-bootstrap-ui BBStringListControl
+ng generate component --project angular-bootstrap-ui BBAutocompleteListControl
+ng generate service --project angular-bootstrap-ui BBErrorMessages
+
+ng generate component --project angular-bootstrap-ui BBFooter
+ng generate component --project angular-bootstrap-ui BBLayout
+ng generate component --project angular-bootstrap-ui BBNavbar
+
+ng generate component --project angular-bootstrap-ui BBConfirm
+ng generate component --project angular-bootstrap-ui BBModal
+ng generate component --project angular-bootstrap-ui BBEllipsis
+
+ng generate pipe --project angular-bootstrap-ui GetError
+ng generate pipe --project angular-bootstrap-ui IsError
+ng generate pipe --project angular-bootstrap-ui IsLoading
+ng generate pipe --project angular-bootstrap-ui IsSuccess
+
+ng generate directive --project angular-bootstrap-ui EmptyIsNull
+ng generate directive --project angular-bootstrap-ui Integer
+ng generate directive --project angular-bootstrap-ui NoComma
+
+ng generate service --project angular-bootstrap-ui BBAlert
+ng generate component --project angular-bootstrap-ui BBAlertGlobal
+
+ng generate service --project angular-bootstrap-ui BBConfirm
+ng generate component --project angular-bootstrap-ui BBConfirmGlobal
+
+
+ng generate component BBAlertsExample
+ng generate component BBBadgesExample
+ng generate component BBBreadcrumbExample
+ng generate component BBButtonExample
+ng generate component BBCardExample
+ng generate component BBCheckboxesExample
+ng generate component BBContentExample
+ng generate component BBDirectivesExample
+
+ng generate component BBInputsExample
+ng generate component BBListsExample
+ng generate component BBLoadingPageExample
+ng generate component BBModalExample
+ng generate component BBRadiosExample
+ng generate component BBStringListExample
+ng generate component BBTableExample
+ng generate component BBTabsExample
+ng generate component BBToastExample
+ng generate component BBTypographyExample
+ng generate component Root
 ```
-cd example-app\node_modules
-
-# for windows
-# NOTE: this require administrator priviledges
-mklink /D angular-bootstrap-ui ../../
-
-# for linux
-# ln -sf angular-bootstrap-ui ../../
-```
-
-### publish gh-pages
-
-cd example-app
-git co gh-pages
-git add fontawesome* index.html inline.bundle.js inline.bundle.js.map main.bundle.js main.bundle.js.map polyfills.bundle.js polyfills.bundle.js.map styles.bundle.js styles.bundle.js.map vendor.bundle.js vendor.bundle.js.map favicon.ico

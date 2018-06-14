@@ -1,0 +1,37 @@
+<bb-static [label]="label">
+
+  <div class="d-flex flex-wrap">
+    <div class="d-inline-flex align-items-center p-2" *ngFor="let val of modelValue; let i = index">
+      <span class="pr-1">{{val}}</span>
+      <a [class.disabled]="disabled" (click)="removeString(i)">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="d-inline-flex align-items-center p-2" *ngIf="!modelValue?.length">
+      <alert type="info">
+        {{emptyMessage}}
+      </alert>
+    </div>
+
+    <div class="d-inline-flex align-items-center p-2">
+      <input
+        class="form-control d-inline-flex"
+        type="text"
+        [name]="name"
+        id="{{name}}-id"
+        [(ngModel)]="str"
+        [disabled]="disabled"
+        [typeahead]="typeahead"
+        [typeaheadItemTemplate]="typeaheadItemTemplate"
+        (keydown)="onKeyDown($event)"
+        autocomplete="off"
+        #input
+        />
+
+        <bb-button [disabled]="disabled || !str.length" (click)="addString()">{{buttonLabel}}</bb-button>
+
+    </div>
+  </div>
+
+</bb-static>

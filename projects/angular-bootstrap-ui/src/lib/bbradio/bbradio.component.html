@@ -1,0 +1,14 @@
+<div class="custom-control custom-radio"
+  [class.form-control-required]="required">
+
+  <input
+    [id]="id"
+    class="custom-control-input"
+    type="radio"
+    [attr.name]="name"
+    [value]="value"
+    [checked]="isChecked()"
+    [disabled]="disabled"
+    [required]="required" />
+  <label (click)="clicked()" class="custom-control-label" [attr.for]="id"><ng-content></ng-content></label>
+</div>

@@ -1,0 +1,17 @@
+<bb-modal
+  #bbModal=""
+  [header]="header"
+  [size]="size"
+  [closeButton]="false">
+  <bb-section-content>
+    <p *ngIf="!isHTML">{{text}}</p>
+    <p *ngIf="isHTML" [innerHTML]="text"></p>
+  </bb-section-content>
+  <bb-section-footer>
+    <div class="d-flex">
+      <bb-button
+        class="ml-auto"
+        (click)="hide()">{{'alert.ok' | translate}}</bb-button>
+    </div>
+  </bb-section-footer>
+</bb-modal>

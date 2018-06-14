@@ -1,0 +1,16 @@
+<div class="custom-control custom-checkbox"
+  [class.form-control-required]="required"
+  [class.has-danger]="model?.errors">
+
+  <input
+    id="{{name}}-id" class="custom-control-input"
+    type="checkbox"
+    [attr.name]="name"
+    [(ngModel)]="boolModelValue"
+    [required]="required"
+    [disabled]="disabled"
+    (ngModelChange)="writeValue(boolModelValue)"
+    [ngModelOptions]="{standalone: true}" />
+  <label class="custom-control-label" [attr.for]="name + '-id'"><ng-content></ng-content></label>
+  <span class="custom-control-label-indicator"></span>
+</div>

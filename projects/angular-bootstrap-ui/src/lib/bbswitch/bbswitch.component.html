@@ -1,0 +1,30 @@
+<div class="form-group">
+  <span
+    class="switch"
+    [class.checked]="boolModelValue"
+    [class.disabled]="disabled"
+    [class.switch-large]="size === 'large'"
+    [class.switch-medium]="size === 'medium'"
+    [class.switch-small]="size === 'small'"
+    [style.background-color]="boolModelValue ? color : defaultBgColor"
+    [style.border-color]="defaultBoColor"
+    (click)="writeValue(!boolModelValue)">
+    <small [style.background]="getSwitchColor()"></small>
+  </span>
+  <label
+    *ngIf="boolModelValue"
+    (click)="writeValue(!boolModelValue)">{{checkedMessage}}</label>
+  <label
+    *ngIf="!boolModelValue"
+    (click)="writeValue(!boolModelValue)">{{uncheckedkMessage}}</label>
+  <input
+    id="{{name}}-id" class="custom-control-input"
+    style="dispaly:none"
+    type="checkbox"
+    [name]="name"
+    [(ngModel)]="boolModelValue"
+    [required]="required"
+    [disabled]="disabled"
+    (ngModelChange)="writeValue(boolModelValue)"
+    [ngModelOptions]="{standalone: true}" />
+</div>

@@ -1,0 +1,4 @@
+{
+  "entry": "./src/scss/angular-bootstrap-ui.scss",
+  "dest": "../../dist/angular-bootstrap-ui/angular-bootstrap-ui.scss"
+}

@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/_mixins.scss';
+@import '~bootstrap/scss/_functions.scss';
+@import '~bootstrap/scss/_variables.scss';
+
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+@import '~angular-bootstrap-ui/scss/angular-bootstrap-ui.scss';
+@import '~bootstrap/scss/bootstrap.scss';

@@ -1,0 +1,14 @@
+<div class="card card-collapsable">
+  <div (click)="toogle()" class="card-header">
+    <div class="card-indicator">
+      <i class="card-opened-icon" *ngIf="!collapsed"></i>
+      <i class="card-closed-icon" *ngIf="collapsed"></i>
+    </div>
+    <h2>{{header}}</h2>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="card-body" [ngStyle]="{'display': collapsed ? 'none' : 'block'}"><ng-content select="bb-section-content"></ng-content></div>
+
+  <div class="card-footer mt-auto" [ngStyle]="{'display': collapsed ? 'none' : 'block'}"><ng-content select="bb-section-footer"></ng-content></div>
+</div>

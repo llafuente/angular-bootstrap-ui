@@ -1,0 +1,113 @@
+<bb-layout footer="sticky">
+<bb-navbar appName="ui">
+  <!-- left side -->
+
+  <li bsDropdown class="nav-item left dropdown" [class.active]="router.isActive('/content', false)">
+    <a bsDropdownToggle class="nav-link dropdown-toggle">
+      Content
+    </a>
+
+    <ul *dropdownMenu class="bg-core dropdown-menu">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/content/typography']">Typography</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/content/content']">Content</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/content/lists']">Lists</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/content/tables']">Tables</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/content/badges']">Badges</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/content/alerts']">Alerts</a>
+      </li>
+    </ul>
+  </li>
+
+  <li bsDropdown class="nav-item left dropdown" [class.active]="router.isActive('/forms', false)">
+    <a bsDropdownToggle class="nav-link dropdown-toggle">
+      Forms
+    </a>
+
+    <ul *dropdownMenu class="bg-core dropdown-menu">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/forms/buttons']">Buttons</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/forms/checkboxes']">Checkboxes</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/forms/radios']">Radios</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/forms/inputs']">Inputs</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/forms/stringlist']">String list</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/forms/directives']">Directivas</a>
+      </li>
+    </ul>
+  </li>
+
+  <li bsDropdown class="nav-item left dropdown" routerLinkActive="active" [class.active]="router.isActive('/components', false)">
+    <a bsDropdownToggle class="nav-link dropdown-toggle">
+      Components
+    </a>
+
+    <ul *dropdownMenu class="bg-core dropdown-menu">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/components/cards']">Cards</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/components/tabs']">Tabs</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/components/modals']">Modals</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/components/toast']">Toast</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="nav-item left" routerLinkActive="active">
+    <a class="nav-link" [routerLink]="['/loading']">Loading sceen</a>
+  </li>
+
+  <li class="nav-item left" routerLinkActive="active">
+    <a class="nav-link" [routerLink]="['/breadcrumb']">Breadcrumb</a>
+  </li>
+
+  <!-- right side -->
+  <li class="nav-item active right">
+    <a class="nav-link" href="#">username</a>
+  </li>
+
+</bb-navbar>
+
+<bb-section-content>
+  <section class="container app-content-container">
+    <router-outlet></router-outlet>
+  </section>
+</bb-section-content>
+
+<bb-footer>
+  <p>angular-bootstrap-ui footer</p>
+</bb-footer>
+
+</bb-layout>
+
+<!-- <ng2-toasty position="bottom-center"></ng2-toasty> -->
+
+<bb-router-change-loading></bb-router-change-loading>
+
+<bb-confirm-service></bb-confirm-service>
+
+<bb-alert-service></bb-alert-service>

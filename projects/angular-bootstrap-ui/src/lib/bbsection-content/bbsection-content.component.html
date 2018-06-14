@@ -1,0 +1,33 @@
+<div [ngSwitch]="subject | isLoading">
+  <div *ngSwitchCase="true">
+
+    <bb-progress></bb-progress>
+
+    <alert type="info" *ngIf="loadingMessage" class="text-center mt-2">
+      {{loadingMessage}}
+    </alert>
+
+  </div>
+
+  <div *ngSwitchCase="false">
+    <div [ngSwitch]="subject | isError">
+
+      <div *ngSwitchCase="false">
+        <ng-content></ng-content>
+      </div>
+
+      <div *ngSwitchCase="true" class="container text-center">
+        <alert type="danger" class="mt-2">
+          {{errorMessage || ("content.error" | translate)}}
+        </alert>
+
+        <button
+          class="btn"
+          type="button"
+          (click)="doReload()">
+          <i class="fa fa-refresh"></i> {{"content.retry" | translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

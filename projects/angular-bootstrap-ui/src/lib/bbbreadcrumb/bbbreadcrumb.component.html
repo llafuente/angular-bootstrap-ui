@@ -1,0 +1,6 @@
+<ol class="breadcrumb" *ngIf="!(hideIfEmpty && breadcrumbs.length == 0)">
+  <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbs" tooltip="{{ breadcrumb.label | translate }}">
+    <a *ngIf="breadcrumb.routerLink" [routerLink]="breadcrumb.routerLink">{{ breadcrumb.label | translate }}</a>
+    <span *ngIf="!breadcrumb.routerLink">{{ breadcrumb.label | translate }}</span>
+  </li>
+</ol>

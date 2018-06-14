@@ -1,0 +1,36 @@
+@import './content.scss';
+@import './cards.scss';
+@import './breadcrumb.scss';
+@import './buttons.scss';
+@import './forms.scss';
+@import './forms-radios.scss';
+@import './forms-checkbox.scss';
+@import './forms-datepicker.scss';
+@import './forms-switch.scss';
+@import './progressbar.scss';
+@import './loading.scss';
+@import './layout.scss';
+@import './table.scss';
+
+@import "~ngx-toastr/toastr.css";
+@import "~ngx-toastr/toastr-bs4-alert";
+
+// fix flickering
+.tooltip {
+  pointer-events:none;
+}
+
+// give some space to icon-anchors
+a + a > i.fa {
+  padding-left: 8px;
+}
+
+// disable anchors
+a[disabled="disabled"],
+a.disabled {
+  pointer-events:none;
+
+  & > i {
+      color: $gray-400;
+  }
+}

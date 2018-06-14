@@ -1,0 +1,29 @@
+<div
+  class="form-group"
+  [class.form-control-required]="required"
+  [class.form-control-disabled]="disabled"
+  [class.has-success]="child.ngControl?.errors === null"
+  [class.has-danger]="child.ngControl?.errors !== null">
+  <label
+    [class.form-label-lg]="size == 'lg'"
+    [class.form-label-sm]="size == 'sm'"
+    *ngIf="label?.length">{{label}}</label>
+  <div
+    class="form-control-container"
+    [class.input-group]="addon || preAddon || postAddon">
+    <div
+      class="input-group-prepend"
+      *ngIf="preAddon">
+      <div class="input-group-text">{{preAddon}}</div>
+    </div>
+    <ng-content></ng-content>
+    <div
+      class="input-group-append"
+      *ngIf="postAddon">
+      <div class="input-group-text">{{postAddon}}</div>
+    </div>
+  </div>
+  <small
+    class="form-text text-muted"
+    *ngIf="help">{{help}}</small>
+</div>
