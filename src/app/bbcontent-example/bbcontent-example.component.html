@@ -1,3 +1,4 @@
+<!--
 <h1>Ellipsis</h1>
 
 <h3>1 lines (no ellipsis)</h3>
@@ -35,3 +36,20 @@
     [subject]="subject">section content</bb-section-content>
   <bb-section-footer>section footer</bb-section-footer>
 </bb-section>
+
+-->
+
+<p>bb-section-content is not rendered until subject is resolved</p>
+
+{{nest | json}}
+
+<bb-section>
+  <bb-section-header>header text</bb-section-header>
+  <bb-section-content
+    [subject]="subject2">
+    <span>{{nest.nest.verynest}}</span>
+  </bb-section-content>
+  <bb-section-footer>section footer</bb-section-footer>
+</bb-section>
+
+

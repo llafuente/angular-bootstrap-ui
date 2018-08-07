@@ -9,9 +9,27 @@ import { Subject } from "rxjs";
 export class BBContentExampleComponent implements OnInit {
 
   subject: Subject<any> = null;
+  subject2: Subject<any> = new Subject<any>();
+
+  nest;
 
   constructor(
   ) {
+    this.subject2.subscribe((x) => {
+console.log("solve!", x);
+    });
+
+    setTimeout(() => {
+      console.log("!?!?!?!?!?!?");
+      this.subject2.next({});
+      //this.subject2.complete();****
+
+      this.nest = {
+        nest: {
+          verynest: "nest.nest.verynest failed?, see the console"
+        }
+      };
+    }, 5000);
   }
 
   createRequest() {

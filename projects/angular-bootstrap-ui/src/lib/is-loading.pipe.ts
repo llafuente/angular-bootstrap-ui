@@ -12,7 +12,7 @@ import { Subject, Subscription } from "rxjs";
   pure: false
 })
 export class IsLoadingPipe implements OnDestroy, PipeTransform {
-  loading: boolean = false;
+  loading: boolean = true;
   subject: Subject<any> = null;
   subscription: Subscription = null;
 
@@ -45,6 +45,8 @@ export class IsLoadingPipe implements OnDestroy, PipeTransform {
       this.subject = null;
       this.loading = false;
       return this.transform(value);
+    } else if (value == null && this.subject == null) {
+      this.loading = false;
     }
 
     return this.loading;

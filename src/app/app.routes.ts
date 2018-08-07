@@ -30,6 +30,11 @@ import { BBTypographyExampleComponent } from './bbtypography-example/bbtypograph
 
 import { Resolve5s } from "./resolve5s";
 
+
+export function getRouterWTF(router: ActivatedRouteSnapshot) {
+  return "wtf!?";
+}
+
 const routes: RoutesWithBreadcrumbs = [
 
   {
@@ -225,9 +230,7 @@ const routes: RoutesWithBreadcrumbs = [
         path: "complex",
         component: RootComponent,
         data: {
-          breadcrumb: function (router: ActivatedRouteSnapshot) {
-            return "wtf!?";
-          }
+          breadcrumb: getRouterWTF
         },
       },
     ]

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -56,12 +57,16 @@ import { RootComponent } from './root/root.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     FormsModule,
     AppRoutes,
     AngularBootstrapUiModule,
 
     TabsModule.forRoot(),
     BsDropdownModule.forRoot(),
+  ],
+  exports: [
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
