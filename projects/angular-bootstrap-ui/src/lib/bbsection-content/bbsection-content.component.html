@@ -1,4 +1,6 @@
-<div [ngSwitch]="subject | isLoading">
+{{subject}}
+
+<div [ngSwitch]="!subject ? false : (subject | isLoading)">
   <div *ngSwitchCase="true">
 
     <bb-progress></bb-progress>
