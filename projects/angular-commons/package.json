@@ -1,5 +1,5 @@
 {
-  "name": "angular-base",
+  "name": "angular-commons",
   "version": "6.0.0",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",

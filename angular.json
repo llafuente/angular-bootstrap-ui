@@ -166,38 +166,38 @@
         }
       }
     },
-    "angular-base": {
-      "root": "projects/angular-base",
-      "sourceRoot": "projects/angular-base/src",
+    "angular-commons": {
+      "root": "projects/angular-commons",
+      "sourceRoot": "projects/angular-commons/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/angular-base/tsconfig.lib.json",
-            "project": "projects/angular-base/ng-package.json"
+            "tsConfig": "projects/angular-commons/tsconfig.lib.json",
+            "project": "projects/angular-commons/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "projects/angular-base/ng-package.prod.json"
+              "project": "projects/angular-commons/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/angular-base/src/test.ts",
-            "tsConfig": "projects/angular-base/tsconfig.spec.json",
-            "karmaConfig": "projects/angular-base/karma.conf.js"
+            "main": "projects/angular-commons/src/test.ts",
+            "tsConfig": "projects/angular-commons/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-commons/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/angular-base/tsconfig.lib.json",
-              "projects/angular-base/tsconfig.spec.json"
+              "projects/angular-commons/tsconfig.lib.json",
+              "projects/angular-commons/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

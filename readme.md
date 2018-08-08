@@ -4,29 +4,17 @@ Complete UI toolkit using bootstrap 4 for Angular 5+.
 
 Built on top of ngx-bootstrap.
 
-# [Changelog](https://github.com/llafuente/angular-bootstrap-ui/blob/master/CHANGELOG.md)
+## [Changelog](/CHANGELOG.md)
 
-# [Examples](https://llafuente.github.io/angular-bootstrap-ui)
+## [Example app](https://llafuente.github.io/angular-bootstrap-ui)
 
-# Documentation
+## [Documentation](/projects/angular-bootstrap-ui/README.md)
 
-* [directives](directives.md)
-  * [bb-child](directives.md#bb-child)
-  * [bb-autosize](directives.md#bb-autosize)
-  * [empty-is-null](directives.md#empty-is-null)
-  * [integer](directives.md#integer)
-  * [no-comma](directives.md#no-comma)
-* [pipes](pipes.md)
-  * [getError](pipes.md#geterror)
-  * [isError](pipes.md#iserror)
-  * [isLoading](pipes.md#isloading)
-  * [isSuccess](pipes.md#issuccess)
-* [components](components.md)
-* [utils](utils.md)
-  * [aggregateSubjects](utils.md#aggregatesubjects)
-* services
-  * [bb-alert-service &amp; BBAlertService](alert-service.md)
-  * [bb-confirm-service &amp; BBConfirmService](confirm-service.md)
+# angular-commons
+
+Small collection of classes that we use across all projects
+
+## [Documentation](/projects/angular-commons/README.md)
 
 
 # Development server
@@ -38,26 +26,8 @@ It will run the example app with all examples.
 If you need to modify angular-bootstrap-ui, you need to restart the process,
 changes in the library are not detected by angular cli :S
 
-# Dependencies notes
 
-## [ngx-toastr](https://github.com/scttcper/ngx-toastr)
-
-We add just design.
-
-This module require you to insert in your HTML:
-
-```html
-<ngx-toastr></ngx-toastr>
-```
-
-### [ngx-bootstrap](https://valor-software.com/ngx-bootstrap)
-
-We configure ngx-bootstrap as bootstrap 4 mode.
-
-To configure datepicker locale read [datepicker/locales](https://valor-software.com/ngx-bootstrap/#/datepicker#locales)
-
-
-## Migration process
+## DEV: Migration process
 
 This is just for reference purposes.
 
@@ -139,9 +109,9 @@ ng generate component BBToastExample
 ng generate component BBTypographyExample
 ng generate component Root
 
-ng generate library angular-base
-ng generate component --project angular-base Root
-ng generate service --project angular-base SessionStorage
-ng generate service --project angular-base Log
-ng generate pipe --project angular-base nl2br
+ng generate library angular-commons
+ng generate component --project angular-commons Root
+ng generate service --project angular-commons SessionStorage
+ng generate service --project angular-commons Log
+ng generate pipe --project angular-commons nl2br
 ```

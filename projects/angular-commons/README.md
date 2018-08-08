@@ -1,11 +1,11 @@
-# angular-base
+# angular-commons
 
 Small collection of classes that we use across all projects
 
 ## Install
 
 ```
-npm i --save "angular-base"
+npm i --save "angular-commons"
 # then install the peerDependencies
 ```
 

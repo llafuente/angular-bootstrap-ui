@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * Migrate to Angular 6, the new naming convention will be to set the first number to the mayor Angular version.
-* Include `angular-common-module` in the project and rename to `angular-base`
+* Include `angular-common-module` in the project and rename to `angular-commons`
 
 
 ### BREAKING CHANGES

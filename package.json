@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:angular-bootstrap-ui": "ng build --project angular-bootstrap-ui && cpr ./projects/angular-bootstrap-ui/src/scss/ ./dist/angular-bootstrap-ui/scss/ --overwrite && npm link dist/angular-bootstrap-ui",
-    "build:angular-base": "ng build --project angular-base && npm link dist/angular-base",
-    "full-start": "npm run build:angular-bootstrap-ui && npm run build:angular-base && ng serve",
+    "build:angular-bootstrap-ui": "ng build --project angular-bootstrap-ui && cpr ./projects/angular-bootstrap-ui/src/scss/ ./dist/angular-bootstrap-ui/scss/ --overwrite && cpr ./projects/angular-bootstrap-ui/README.md ./dist/angular-bootstrap-ui/README.md --overwrite && npm link dist/angular-bootstrap-ui",
+    "build:angular-commons": "ng build --project angular-commons && npm link dist/angular-commons",
+    "full-start": "npm run build:angular-bootstrap-ui && npm run build:angular-commons && ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
