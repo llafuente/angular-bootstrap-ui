@@ -22,6 +22,12 @@
       ],
       "angular-bootstrap-ui/*": [
         "dist/angular-bootstrap-ui/*"
+      ],
+      "angular-base": [
+        "dist/angular-base"
+      ],
+      "angular-base/*": [
+        "dist/angular-base/*"
       ]
     }
   }
