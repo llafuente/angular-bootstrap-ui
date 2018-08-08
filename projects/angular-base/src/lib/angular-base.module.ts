@@ -23,4 +23,4 @@ export * from './Base';
   declarations: [RootComponent, Nl2brPipe],
   exports: [RootComponent, Nl2brPipe]
 })
-export class AngularCommonModule { }
+export class AngularBaseModule { }

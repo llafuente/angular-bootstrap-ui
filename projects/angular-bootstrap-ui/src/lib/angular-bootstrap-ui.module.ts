@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { AngularBootstrapUiComponent } from './angular-bootstrap-ui.component';
 
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
@@ -43,7 +42,7 @@ export { BBProgressComponent } from './bbprogress/bbprogress.component';
 import { BBLoadingPageComponent } from './bbloading-page/bbloading-page.component';
 export { BBLoadingPageComponent } from './bbloading-page/bbloading-page.component';
 import { BBBreadcrumbComponent } from './bbbreadcrumb/bbbreadcrumb.component';
-export { BBBreadcrumbComponent } from './bbbreadcrumb/bbbreadcrumb.component';
+export { BBBreadcrumbComponent, getFromResolve } from './bbbreadcrumb/bbbreadcrumb.component';
 import { BBCheckComponent } from './bbcheck/bbcheck.component';
 export { BBCheckComponent } from './bbcheck/bbcheck.component';
 import { BBChildDirective } from './bbchild.directive';
@@ -130,7 +129,7 @@ export { RoutesWithBreadcrumbs } from './bbbreadcrumb/bbbreadcrumb.component';
     ToastrModule.forRoot(), // ToastrModule added
   ],
 
-  declarations: [AngularBootstrapUiComponent, BBButtonComponent, BBCardComponent, BBCardCollapsableComponent, BBRouterChangeLoadingComponent, BBSectionComponent, BBSectionContentComponent, BBSectionFooterComponent, BBSectionHeaderComponent, BBTableComponent, BBSectionCollapsableComponent, BBProgressComponent, BBLoadingPageComponent, BBBreadcrumbComponent, BBCheckComponent, BBChildDirective, BBDatepickerComponent, BBErrorsComponent, BBInputContainerComponent, BBRadioComponent, BBStaticComponent, BBSwitchComponent, BBTextareaAutosizeDirective, BBStringListControlComponent, BBAutocompleteListControlComponent, BBFooterComponent, BBLayoutComponent, BBNavbarComponent, BBConfirmComponent, BBModalComponent, BBEllipsisComponent, GetErrorPipe, IsErrorPipe, IsLoadingPipe, IsSuccessPipe, EmptyIsNullDirective, IntegerDirective, NoCommaDirective, BBAlertGlobalComponent, BBConfirmGlobalComponent],
+  declarations: [BBButtonComponent, BBCardComponent, BBCardCollapsableComponent, BBRouterChangeLoadingComponent, BBSectionComponent, BBSectionContentComponent, BBSectionFooterComponent, BBSectionHeaderComponent, BBTableComponent, BBSectionCollapsableComponent, BBProgressComponent, BBLoadingPageComponent, BBBreadcrumbComponent, BBCheckComponent, BBChildDirective, BBDatepickerComponent, BBErrorsComponent, BBInputContainerComponent, BBRadioComponent, BBStaticComponent, BBSwitchComponent, BBTextareaAutosizeDirective, BBStringListControlComponent, BBAutocompleteListControlComponent, BBFooterComponent, BBLayoutComponent, BBNavbarComponent, BBConfirmComponent, BBModalComponent, BBEllipsisComponent, GetErrorPipe, IsErrorPipe, IsLoadingPipe, IsSuccessPipe, EmptyIsNullDirective, IntegerDirective, NoCommaDirective, BBAlertGlobalComponent, BBConfirmGlobalComponent],
 
   providers: [
     BBAlertService,
@@ -141,7 +140,6 @@ export { RoutesWithBreadcrumbs } from './bbbreadcrumb/bbbreadcrumb.component';
   exports: [
     BBButtonComponent, BBCardComponent, BBCardCollapsableComponent, BBRouterChangeLoadingComponent, BBSectionComponent, BBSectionContentComponent, BBSectionFooterComponent, BBSectionHeaderComponent, BBTableComponent, BBSectionCollapsableComponent, BBProgressComponent, BBLoadingPageComponent, BBBreadcrumbComponent, BBCheckComponent, BBChildDirective, BBDatepickerComponent, BBErrorsComponent, BBInputContainerComponent, BBRadioComponent, BBStaticComponent, BBSwitchComponent, BBTextareaAutosizeDirective, BBStringListControlComponent, BBAutocompleteListControlComponent, BBFooterComponent, BBLayoutComponent, BBNavbarComponent, BBConfirmComponent, BBModalComponent, BBEllipsisComponent, GetErrorPipe, IsErrorPipe, IsLoadingPipe, IsSuccessPipe, EmptyIsNullDirective, IntegerDirective, NoCommaDirective, BBAlertGlobalComponent, BBConfirmGlobalComponent,
 
-    AngularBootstrapUiComponent,
     TooltipModule,
     AlertModule,
     DatepickerModule,

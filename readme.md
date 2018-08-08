@@ -139,9 +139,9 @@ ng generate component BBToastExample
 ng generate component BBTypographyExample
 ng generate component Root
 
-ng generate library angular-common-module
-ng generate component --project angular-common-module Root
-ng generate service --project angular-common-module SessionStorage
-ng generate service --project angular-common-module Log
-ng generate pipe --project angular-common-module nl2br
+ng generate library angular-base
+ng generate component --project angular-base Root
+ng generate service --project angular-base SessionStorage
+ng generate service --project angular-base Log
+ng generate pipe --project angular-base nl2br
 ```
