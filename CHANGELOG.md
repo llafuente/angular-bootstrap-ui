@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.0"></a>
+## [6.0.0](https://github.com/llafuente/angular-bootstrap-ui/compare/v1.3.1...v6.0.0) (2018-05-25)
+
+
+### Features
+
+* Migrate to Angular 6, the new naming convention will be to set the first number to the mayor Angular version.
+* Include `angular-common-module` in the project and rename to `angular-base`
+
+
+### BREAKING CHANGES
+
+* ng2-toasty is replaced by ngx-toaster
+* @ngx-translate/core updated to 10.0.1
+* ngx-bootstrap updated to 3.0.0
+
+
 <a name="1.3.1"></a>
 ## [1.3.1](https://github.com/llafuente/angular-bootstrap-ui/compare/v1.3.0...v1.3.1) (2018-05-25)
 
