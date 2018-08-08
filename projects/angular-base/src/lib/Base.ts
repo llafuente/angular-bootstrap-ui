@@ -110,7 +110,7 @@ export class Base implements /*OnInit, */OnDestroy {
     }
   }
   /**
-   * Create an error growl, require ng2-toasty to be configured
+   * Create an error growl, require ngx-toaster to be configured
    */
   errGrowl(str: string, timeout: number = 10000) {
     this.toastrService.error(null, str, {
@@ -120,7 +120,7 @@ export class Base implements /*OnInit, */OnDestroy {
     });
   }
   /**
-   * Create a warning growl, require ng2-toasty to be configured
+   * Create a warning growl, require ngx-toaster to be configured
    */
   warnGrowl(str: string, timeout = 10000) {
     this.toastrService.warning(null, str, {
@@ -130,7 +130,7 @@ export class Base implements /*OnInit, */OnDestroy {
     });
   }
   /**
-   * Create an info growl, require ng2-toasty to be configured
+   * Create an info growl, require ngx-toaster to be configured
    */
   growl(str: string, timeout: number = 5000) {
     this.toastrService.info(null, str, {

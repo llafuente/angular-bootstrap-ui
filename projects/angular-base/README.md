@@ -17,7 +17,7 @@ Base is the class to extends all your components.
 
 * Handle subscriptions, unsubscribe on ngDestroy
 * Handle timeouts, clear them on ngDestroy
-* Growls (using ng2-toasty)
+* Growls (using ngx-toastr)
 * Parse route parameters (string/number)
 * Get data from resolves
 * Confirmation modals
