@@ -120,7 +120,7 @@ export { RoutesWithBreadcrumbs } from './bbbreadcrumb/bbbreadcrumb.component';
     ModalModule.forRoot(),
     TypeaheadModule.forRoot(),
 
-    TranslateModule.forRoot(),
+    TranslateModule.forChild(),
   ],
 
   declarations: [BBButtonComponent, BBCardComponent, BBCardCollapsableComponent, BBRouterChangeLoadingComponent, BBSectionComponent, BBSectionContentComponent, BBSectionFooterComponent, BBSectionHeaderComponent, BBTableComponent, BBSectionCollapsableComponent, BBProgressComponent, BBLoadingPageComponent, BBBreadcrumbComponent, BBCheckComponent, BBChildDirective, BBDatepickerComponent, BBErrorsComponent, BBInputContainerComponent, BBRadioComponent, BBStaticComponent, BBSwitchComponent, BBTextareaAutosizeDirective, BBStringListControlComponent, BBAutocompleteListControlComponent, BBFooterComponent, BBLayoutComponent, BBNavbarComponent, BBConfirmComponent, BBModalComponent, BBEllipsisComponent, GetErrorPipe, IsErrorPipe, IsLoadingPipe, IsSuccessPipe, EmptyIsNullDirective, IntegerDirective, NoCommaDirective, BBAlertGlobalComponent, BBConfirmGlobalComponent],
