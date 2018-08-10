@@ -17,7 +17,7 @@ export class BBAlertService {
   }
 
   show(header: string, text: string, isHTML: boolean): Subject<boolean> {
-    console.log(header,text,isHTML);
+    //console.log(header,text,isHTML);
     return this.component.show(header, text, isHTML);
   }
 

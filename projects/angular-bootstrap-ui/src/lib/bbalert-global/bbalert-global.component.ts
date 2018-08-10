@@ -45,7 +45,7 @@ export class BBAlertGlobalComponent implements OnDestroy, OnInit {
 
 
   show(header: string, text: string, isHTML: boolean, size: string = "md"): Subject<null> {
-    console.log(header,text, isHTML);
+    //console.log(header,text, isHTML);
     this.bbModal.show();
 
     this.header = header;

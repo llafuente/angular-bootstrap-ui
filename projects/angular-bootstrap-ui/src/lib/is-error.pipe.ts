@@ -30,12 +30,12 @@ export class IsErrorPipe implements OnDestroy, PipeTransform {
         this.subject = value;
         this.subscription = value.subscribe(
           response => {
-            console.log("IsErrorPipe.success", response);
+            //console.log("IsErrorPipe.success", response);
             this.result = null;
             this._ref.markForCheck();
           },
           error => {
-            console.log("IsErrorPipe.error", error);
+            //console.log("IsErrorPipe.error", error);
             this.result = error;
             this._ref.markForCheck();
           }
