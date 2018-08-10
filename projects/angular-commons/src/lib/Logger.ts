@@ -1,5 +1,4 @@
 import { Subject } from 'rxjs'
-//import { LogService } from './Log.service'
 
 export interface Notification {
   type: string;

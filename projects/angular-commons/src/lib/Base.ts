@@ -4,7 +4,7 @@ import { ActivatedRoute, ActivatedRouteSnapshot, Router, Params } from "@angular
 import { BBAlertService, BBConfirmService } from "angular-bootstrap-ui";
 import { ToastrService, ToastrConfig } from 'ngx-toastr';
 
-import { LogService } from "./Log.service";
+import { LogService } from "./log.service";
 import { Logger } from "./Logger";
 import { SessionStorageService } from "./session-storage.service";
 
