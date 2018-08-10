@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 
-import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 
@@ -12,7 +11,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// ToastrModule is not imported, should be at root app
+// left here to remember is a peerDependency we cannot compile without it
 import { ToastrModule } from 'ngx-toastr';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -109,7 +109,7 @@ export { RoutesWithBreadcrumbs } from './bbbreadcrumb/bbbreadcrumb.component';
 
 @NgModule({
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule,
     RouterModule,
 
@@ -120,13 +120,7 @@ export { RoutesWithBreadcrumbs } from './bbbreadcrumb/bbbreadcrumb.component';
     ModalModule.forRoot(),
     TypeaheadModule.forRoot(),
 
-    //ToastyModule.forRoot(),
-
     TranslateModule.forRoot(),
-
-    CommonModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
   ],
 
   declarations: [BBButtonComponent, BBCardComponent, BBCardCollapsableComponent, BBRouterChangeLoadingComponent, BBSectionComponent, BBSectionContentComponent, BBSectionFooterComponent, BBSectionHeaderComponent, BBTableComponent, BBSectionCollapsableComponent, BBProgressComponent, BBLoadingPageComponent, BBBreadcrumbComponent, BBCheckComponent, BBChildDirective, BBDatepickerComponent, BBErrorsComponent, BBInputContainerComponent, BBRadioComponent, BBStaticComponent, BBSwitchComponent, BBTextareaAutosizeDirective, BBStringListControlComponent, BBAutocompleteListControlComponent, BBFooterComponent, BBLayoutComponent, BBNavbarComponent, BBConfirmComponent, BBModalComponent, BBEllipsisComponent, GetErrorPipe, IsErrorPipe, IsLoadingPipe, IsSuccessPipe, EmptyIsNullDirective, IntegerDirective, NoCommaDirective, BBAlertGlobalComponent, BBConfirmGlobalComponent],
@@ -145,8 +139,6 @@ export { RoutesWithBreadcrumbs } from './bbbreadcrumb/bbbreadcrumb.component';
     DatepickerModule,
     ModalModule,
     TypeaheadModule,
-
-    //ToastyModule,
 
     TranslateModule,
   ]

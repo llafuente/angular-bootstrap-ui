@@ -40,6 +40,20 @@ This module require you to insert in your HTML:
 <ngx-toastr></ngx-toastr>
 ```
 
+And at root module
+
+```ts
+import { ToastrModule } from "ngx-toastr";
+
+@NgModule({
+  imports: [
+    ToastrModule.forRoot()
+    //...
+  ]
+})
+//...
+```
+
 ### [ngx-bootstrap](https://valor-software.com/ngx-bootstrap)
 
 We configure ngx-bootstrap as bootstrap 4 mode.

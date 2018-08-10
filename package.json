@@ -3,11 +3,10 @@
   "version": "6.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run build:angular-bootstrap-ui && npm run build:angular-commons && ng serve",
     "build:angular-bootstrap-ui": "ng build --project angular-bootstrap-ui && cpr ./projects/angular-bootstrap-ui/src/scss/ ./dist/angular-bootstrap-ui/scss/ --overwrite && cpr ./projects/angular-bootstrap-ui/README.md ./dist/angular-bootstrap-ui/README.md --overwrite && npm link dist/angular-bootstrap-ui",
     "build:angular-commons": "ng build --project angular-commons && npm link dist/angular-commons",
-    "full-start": "npm run build:angular-bootstrap-ui && npm run build:angular-commons && ng serve",
-    "build": "ng build",
+    "build": "npm run build:angular-bootstrap-ui && npm run build:angular-commons && ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
