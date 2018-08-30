@@ -1,6 +1,6 @@
 {
   "name": "angular-bootstrap-ui",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "scripts": {
     "build": "ng build --project angular-bootstrap-ui; scss-bundle -c scss-bundle.config.json"
   },
