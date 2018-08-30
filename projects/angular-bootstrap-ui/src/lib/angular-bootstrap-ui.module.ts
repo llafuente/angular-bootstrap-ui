@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
@@ -106,7 +106,24 @@ export { BBErrorMessagesService } from './bberror-messages.service';
 export { aggregateSubjects } from './utils/aggregateSubjects';
 export { RoutesWithBreadcrumbs } from './bbbreadcrumb/bbbreadcrumb.component';
 
-
+/**
+ * @usageNotes
+ *
+ * AngularBootstrapUiModule can be imported multiple times.
+ *
+ * * `forRoot` creates a module that contains all the directives, components,
+ *    pipes and global services.
+ * * `forChild` creates a module that contains all directives, components,
+ *    and pipes.
+ *
+ * TranslateModule need to be imported the same way (do not mix
+ * forRoot / forChild)
+ *
+ * @description
+ *
+ * Complete UI toolkit using bootstrap 4 for Angular 5+.
+ * Built on top of ngx-bootstrap.
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -124,12 +141,6 @@ export { RoutesWithBreadcrumbs } from './bbbreadcrumb/bbbreadcrumb.component';
   ],
 
   declarations: [BBButtonComponent, BBCardComponent, BBCardCollapsableComponent, BBRouterChangeLoadingComponent, BBSectionComponent, BBSectionContentComponent, BBSectionFooterComponent, BBSectionHeaderComponent, BBTableComponent, BBSectionCollapsableComponent, BBProgressComponent, BBLoadingPageComponent, BBBreadcrumbComponent, BBCheckComponent, BBChildDirective, BBDatepickerComponent, BBErrorsComponent, BBInputContainerComponent, BBRadioComponent, BBStaticComponent, BBSwitchComponent, BBTextareaAutosizeDirective, BBStringListControlComponent, BBAutocompleteListControlComponent, BBFooterComponent, BBLayoutComponent, BBNavbarComponent, BBConfirmComponent, BBModalComponent, BBEllipsisComponent, GetErrorPipe, IsErrorPipe, IsLoadingPipe, IsSuccessPipe, EmptyIsNullDirective, IntegerDirective, NoCommaDirective, BBAlertGlobalComponent, BBConfirmGlobalComponent],
-
-  providers: [
-    BBAlertService,
-    BBConfirmService,
-    BBErrorMessagesService,
-  ],
 
   exports: [
     BBButtonComponent, BBCardComponent, BBCardCollapsableComponent, BBRouterChangeLoadingComponent, BBSectionComponent, BBSectionContentComponent, BBSectionFooterComponent, BBSectionHeaderComponent, BBTableComponent, BBSectionCollapsableComponent, BBProgressComponent, BBLoadingPageComponent, BBBreadcrumbComponent, BBCheckComponent, BBChildDirective, BBDatepickerComponent, BBErrorsComponent, BBInputContainerComponent, BBRadioComponent, BBStaticComponent, BBSwitchComponent, BBTextareaAutosizeDirective, BBStringListControlComponent, BBAutocompleteListControlComponent, BBFooterComponent, BBLayoutComponent, BBNavbarComponent, BBConfirmComponent, BBModalComponent, BBEllipsisComponent, GetErrorPipe, IsErrorPipe, IsLoadingPipe, IsSuccessPipe, EmptyIsNullDirective, IntegerDirective, NoCommaDirective, BBAlertGlobalComponent, BBConfirmGlobalComponent,
@@ -171,7 +182,7 @@ export class AngularBootstrapUiModule {
         "cancel": "Cancel",
         "accept": "Accept"
       },
-    });
+    }, true);
     translate.setTranslation('es', {
       "content": {
         "retry": "Volver a intentarlo",
@@ -194,6 +205,21 @@ export class AngularBootstrapUiModule {
         "cancel": "Cancelar",
         "accept": "Aceptar"
       },
-    });
+    }, true);
+  }
+
+  static forChild() : ModuleWithProviders {
+    return { ngModule: AngularBootstrapUiModule, providers: [] };
+  }
+
+  static forRoot() : ModuleWithProviders {
+    return {
+      ngModule: AngularBootstrapUiModule,
+      providers: [
+        BBAlertService,
+        BBConfirmService,
+        BBErrorMessagesService,
+      ],
+    };
   }
 }

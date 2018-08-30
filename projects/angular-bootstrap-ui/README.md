@@ -8,6 +8,51 @@ Built on top of ngx-bootstrap.
 
 # [Examples](https://llafuente.github.io/angular-bootstrap-ui)
 
+# Installation
+
+## Child module
+```
+@NgModule({
+  imports: [
+    AngularBootstrapUiModule.forChild(),
+
+    TranslateModule.forChild(),
+  ],
+})
+
+export class ChildModule {
+  constructor(
+    translate: TranslateService,
+  ) {
+    // NOTE: merge translations, do not overwrite
+    translate.setTranslation('xx', {}, true);
+    translate.use('xx');
+  }
+}
+```
+
+## Root module
+
+```
+@NgModule({
+  imports: [
+    AngularBootstrapUiModule.forRoot(),
+
+    TranslateModule.forRoot(),
+  ],
+})
+
+export class RootModule {
+  constructor(
+    translate: TranslateService,
+  ) {
+    // NOTE: merge translations, do not overwrite
+    translate.setTranslation('xx', {}, true);
+    translate.use('xx');
+  }
+}
+```
+
 # Documentation
 
 * [directives](directives.md)
